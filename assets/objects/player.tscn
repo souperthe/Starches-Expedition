@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://3axwg5pp7esm"]
+
+[ext_resource type="SpriteFrames" uid="uid://ca67ep75bjo76" path="res://assets/resources/sprite_frames/frames_starch.tres" id="1_ikdab"]
+
+[node name="Player" type="CharacterBody2D" unique_id=1979464615]
+
+[node name="Animator" type="AnimatedSprite2D" parent="." unique_id=533695008]
+position = Vector2(0, -40)
+sprite_frames = ExtResource("1_ikdab")
+animation = &"idle"
+frame = 11
+frame_progress = 0.425062
+speed_scale = 0.25
