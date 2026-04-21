@@ -176,7 +176,7 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("32_vl87o")
 }],
-"loop": true,
+"loop": false,
 "name": &"jump",
 "speed": 60.0
 }, {

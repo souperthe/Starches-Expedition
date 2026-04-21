@@ -4,7 +4,7 @@ var runPhysics:bool = true
 var wishDirection:Vector2
 var controlDirection:Vector2
 
-var gravityScale:float = 1687.5
+var gravityScale:float = 1887.5
 var lastSpeed:float = 0
 var coyoteTime:float = 0
 var coyoteTimeMax:float = 5
