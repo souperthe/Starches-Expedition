@@ -59,15 +59,16 @@ func stateProcess(delta:float) -> void:
 	
 	var effectiveTarget:float = targetSpeed * slopeMultiplier
 	var effectiveAccel:float  = currentAcceleration * slopeMultiplier
-
-	player.velocity.x = move_toward(player.velocity.x, effectiveTarget, effectiveAccel * delta)
 	
 	var facingLeft:bool = player.controlDirection.x < 0.0
 	var isSkidding:bool = player.velocity.x < 0.0 != facingLeft
 	
 	if isSkidding:
-		animator.animationPlay("skid", 0.5)
+		animator.animationPlay("skid", 0.3)
+		effectiveAccel = effectiveAccel * 2
 	else:
 		animator.animationPlay("move", speedScale)
+		
+	player.velocity.x = move_toward(player.velocity.x, effectiveTarget, effectiveAccel * delta)
 
 	return

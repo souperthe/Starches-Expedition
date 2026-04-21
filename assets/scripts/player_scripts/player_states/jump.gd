@@ -18,7 +18,7 @@ func stateEnter(_enterMessage:String) -> void:
 		
 	jumpLetGo = false
 	animator.animationPlay("idle", 0.3)
-	animator.animationPlay("jump", 0.3)
+	animator.animationPlay("jump", 0.4)
 		
 	var speed:float= abs(player.velocity.x)
 	speedThreshold = jumpPower.size()

@@ -19,11 +19,12 @@ random_pitch = 1.0656005
 streams_count = 1
 stream_0/stream = ExtResource("9_lvyht")
 
-[node name="Player" type="CharacterBody2D" unique_id=1979464615 node_paths=PackedStringArray("animationManager", "sprite")]
+[node name="Player" type="CharacterBody2D" unique_id=1979464615 node_paths=PackedStringArray("animationManager", "soundManager", "sprite")]
 floor_constant_speed = true
 floor_snap_length = 32.0
 script = ExtResource("1_5pvfp")
 animationManager = NodePath("AnimationManager")
+soundManager = NodePath("SoundManager")
 sprite = NodePath("SpritePivot/Animator")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=283525169]

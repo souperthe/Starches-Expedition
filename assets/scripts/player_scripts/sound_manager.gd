@@ -15,6 +15,17 @@ func playSound(soundName:String, soundPitch:float=1) -> void:
 	targetSound.play()
 	targetSound.pitch_scale = soundPitch
 	return
+	
+func stopSound(soundName:String) -> void:
+	soundName = soundName.to_lower()
+	
+	if !(_sounds.has(soundName)):
+		return
+		
+	var targetSound:AudioStreamPlayer2D = _sounds[soundName]
+	
+	targetSound.play()
+	return
 
 func _ready() -> void:
 	
