@@ -1,33 +1,79 @@
 [gd_resource type="SpriteFrames" format=3 uid="uid://ca67ep75bjo76"]
 
-[ext_resource type="Texture2D" uid="uid://cu2bl0m2wv5xy" path="res://assets/images/characters/starch/idle/starchidle_0001.png" id="1_ir7i6"]
-[ext_resource type="Texture2D" uid="uid://yx45o6hgfnqf" path="res://assets/images/characters/starch/idle/starchidle_0002.png" id="2_nn4s6"]
-[ext_resource type="Texture2D" uid="uid://iavuo3yggnhl" path="res://assets/images/characters/starch/idle/starchidle_0003.png" id="3_4i5w0"]
-[ext_resource type="Texture2D" uid="uid://buf5wfn7v3s6q" path="res://assets/images/characters/starch/idle/starchidle_0004.png" id="4_ro680"]
-[ext_resource type="Texture2D" uid="uid://db02hda8vqqxa" path="res://assets/images/characters/starch/idle/starchidle_0005.png" id="5_gld7f"]
-[ext_resource type="Texture2D" uid="uid://dl0foegftm7dw" path="res://assets/images/characters/starch/idle/starchidle_0006.png" id="6_g2qnk"]
-[ext_resource type="Texture2D" uid="uid://dvtxn37jmciy0" path="res://assets/images/characters/starch/idle/starchidle_0007.png" id="7_ka5is"]
-[ext_resource type="Texture2D" uid="uid://3ar64ujmvwv7" path="res://assets/images/characters/starch/idle/starchidle_0008.png" id="8_21hyx"]
-[ext_resource type="Texture2D" uid="uid://cixws4578kd2i" path="res://assets/images/characters/starch/idle/starchidle_0009.png" id="9_yqc50"]
-[ext_resource type="Texture2D" uid="uid://dmklbh1bx6iby" path="res://assets/images/characters/starch/idle/starchidle_0010.png" id="10_xrayv"]
-[ext_resource type="Texture2D" uid="uid://cthfoxfa5nrdn" path="res://assets/images/characters/starch/idle/starchidle_0011.png" id="11_5mnw2"]
-[ext_resource type="Texture2D" uid="uid://bafvy548nhs2x" path="res://assets/images/characters/starch/idle/starchidle_0012.png" id="12_kq1c6"]
-[ext_resource type="Texture2D" uid="uid://gue5nr4gd3vo" path="res://assets/images/characters/starch/idle/starchidle_0013.png" id="13_fc4fk"]
-[ext_resource type="Texture2D" path="res://assets/images/characters/starch/idle/starchwalk_0001.png" id="14_6x3xa"]
-[ext_resource type="Texture2D" path="res://assets/images/characters/starch/idle/starchwalk_0002.png" id="15_5ci2s"]
-[ext_resource type="Texture2D" path="res://assets/images/characters/starch/idle/starchwalk_0003.png" id="16_82km6"]
-[ext_resource type="Texture2D" path="res://assets/images/characters/starch/idle/starchwalk_0004.png" id="17_jdqlv"]
-[ext_resource type="Texture2D" path="res://assets/images/characters/starch/idle/starchwalk_0005.png" id="18_0xk5j"]
-[ext_resource type="Texture2D" path="res://assets/images/characters/starch/idle/starchwalk_0006.png" id="19_l63c5"]
-[ext_resource type="Texture2D" path="res://assets/images/characters/starch/idle/starchwalk_0007.png" id="20_7bv8t"]
-[ext_resource type="Texture2D" path="res://assets/images/characters/starch/idle/starchwalk_0008.png" id="21_lqv1o"]
-[ext_resource type="Texture2D" path="res://assets/images/characters/starch/idle/starchwalk_0009.png" id="22_hr7nd"]
-[ext_resource type="Texture2D" path="res://assets/images/characters/starch/idle/starchwalk_0010.png" id="23_3axyn"]
-[ext_resource type="Texture2D" path="res://assets/images/characters/starch/idle/starchwalk_0011.png" id="24_k6jp7"]
-[ext_resource type="Texture2D" path="res://assets/images/characters/starch/idle/starchwalk_0012.png" id="25_6ksnf"]
+[ext_resource type="Texture2D" uid="uid://u0l6su4ydcqk" path="res://assets/images/characters/starch/starch_dive.swf/frames/1.svg" id="1_6ksnf"]
+[ext_resource type="Texture2D" uid="uid://clvdr43juidpl" path="res://assets/images/characters/starch/starch_idle.swf/frames/1.svg" id="1_ir7i6"]
+[ext_resource type="Texture2D" uid="uid://bak8kvonjnw0j" path="res://assets/images/characters/starch/starch_dive.swf/frames/2.svg" id="2_2pjaq"]
+[ext_resource type="Texture2D" uid="uid://botndaeqmvn16" path="res://assets/images/characters/starch/starch_idle.swf/frames/2.svg" id="2_nn4s6"]
+[ext_resource type="Texture2D" uid="uid://c5whqs4kejfb6" path="res://assets/images/characters/starch/starch_dive.swf/frames/3.svg" id="3_2f7xg"]
+[ext_resource type="Texture2D" uid="uid://cuiqh0otbrdu1" path="res://assets/images/characters/starch/starch_idle.swf/frames/3.svg" id="3_4i5w0"]
+[ext_resource type="Texture2D" uid="uid://bwcvmjq432dgc" path="res://assets/images/characters/starch/starch_dive.swf/frames/4.svg" id="4_84t4m"]
+[ext_resource type="Texture2D" uid="uid://dm5wn42aclvrt" path="res://assets/images/characters/starch/starch_idle.swf/frames/4.svg" id="4_ro680"]
+[ext_resource type="Texture2D" uid="uid://brviov3k5r8gn" path="res://assets/images/characters/starch/starch_idle.swf/frames/5.svg" id="5_gld7f"]
+[ext_resource type="Texture2D" uid="uid://bwydkqahvtdk" path="res://assets/images/characters/starch/starch_dive.swf/frames/5.svg" id="5_hxidi"]
+[ext_resource type="Texture2D" uid="uid://bkrpipxmosq3b" path="res://assets/images/characters/starch/starch_idle.swf/frames/6.svg" id="6_g2qnk"]
+[ext_resource type="Texture2D" uid="uid://ccw480vxaehth" path="res://assets/images/characters/starch/starch_idle.swf/frames/7.svg" id="7_ka5is"]
+[ext_resource type="Texture2D" uid="uid://grf2n7kfd8ou" path="res://assets/images/characters/starch/starch_idle.swf/frames/8.svg" id="8_21hyx"]
+[ext_resource type="Texture2D" uid="uid://dtk62cs3uk4fs" path="res://assets/images/characters/starch/starch_idle.swf/frames/9.svg" id="9_yqc50"]
+[ext_resource type="Texture2D" uid="uid://doj4hoa261g5u" path="res://assets/images/characters/starch/starch_idle.swf/frames/10.svg" id="10_xrayv"]
+[ext_resource type="Texture2D" uid="uid://cinxqc00tnsjl" path="res://assets/images/characters/starch/starch_idle.swf/frames/11.svg" id="11_5mnw2"]
+[ext_resource type="Texture2D" uid="uid://bsi877yoy4icg" path="res://assets/images/characters/starch/starch_idle.swf/frames/12.svg" id="12_kq1c6"]
+[ext_resource type="Texture2D" uid="uid://cje67asuchps8" path="res://assets/images/characters/starch/starch_idle.swf/frames/13.svg" id="13_fc4fk"]
+[ext_resource type="Texture2D" uid="uid://dpro1d3esacd3" path="res://assets/images/characters/starch/starch_move.swf/frames/1.svg" id="14_6x3xa"]
+[ext_resource type="Texture2D" uid="uid://f804fgaxk20t" path="res://assets/images/characters/starch/starch_jump.swf/frames/1.svg" id="14_7bv8t"]
+[ext_resource type="Texture2D" uid="uid://b4353k1jd6471" path="res://assets/images/characters/starch/starch_move.swf/frames/2.svg" id="15_5ci2s"]
+[ext_resource type="Texture2D" uid="uid://diylohfj7joap" path="res://assets/images/characters/starch/starch_jump.swf/frames/2.svg" id="15_lqv1o"]
+[ext_resource type="Texture2D" uid="uid://wn08ubl66htm" path="res://assets/images/characters/starch/starch_move.swf/frames/3.svg" id="16_82km6"]
+[ext_resource type="Texture2D" uid="uid://c2cppnntfw1w5" path="res://assets/images/characters/starch/starch_jump.swf/frames/3.svg" id="16_hr7nd"]
+[ext_resource type="Texture2D" uid="uid://bhv6nu37sjeho" path="res://assets/images/characters/starch/starch_jump.swf/frames/4.svg" id="17_3axyn"]
+[ext_resource type="Texture2D" uid="uid://jr8cd7r1etel" path="res://assets/images/characters/starch/starch_move.swf/frames/4.svg" id="17_jdqlv"]
+[ext_resource type="Texture2D" uid="uid://cdax2s52wcejd" path="res://assets/images/characters/starch/starch_move.swf/frames/5.svg" id="18_0xk5j"]
+[ext_resource type="Texture2D" uid="uid://cxtopkcgw6c01" path="res://assets/images/characters/starch/starch_jump.swf/frames/5.svg" id="18_k6jp7"]
+[ext_resource type="Texture2D" uid="uid://bjhbydtekbda3" path="res://assets/images/characters/starch/starch_jump.swf/frames/6.svg" id="19_6ksnf"]
+[ext_resource type="Texture2D" uid="uid://hg2vthlvow1y" path="res://assets/images/characters/starch/starch_move.swf/frames/6.svg" id="19_l63c5"]
+[ext_resource type="Texture2D" uid="uid://bubs85tsjqkhi" path="res://assets/images/characters/starch/starch_jump.swf/frames/7.svg" id="20_2pjaq"]
+[ext_resource type="Texture2D" uid="uid://ch4w4ulyfr6im" path="res://assets/images/characters/starch/starch_move.swf/frames/7.svg" id="20_7bv8t"]
+[ext_resource type="Texture2D" uid="uid://og4uakw4lc5n" path="res://assets/images/characters/starch/starch_jump.swf/frames/8.svg" id="21_2f7xg"]
+[ext_resource type="Texture2D" uid="uid://cnre20eohvibt" path="res://assets/images/characters/starch/starch_move.swf/frames/8.svg" id="21_lqv1o"]
+[ext_resource type="Texture2D" uid="uid://b83xkuxdd7jml" path="res://assets/images/characters/starch/starch_jump.swf/frames/9.svg" id="22_84t4m"]
+[ext_resource type="Texture2D" uid="uid://chwc0b56bwgm3" path="res://assets/images/characters/starch/starch_move.swf/frames/9.svg" id="22_hr7nd"]
+[ext_resource type="Texture2D" uid="uid://bmemlhhemrw4v" path="res://assets/images/characters/starch/starch_move.swf/frames/10.svg" id="23_3axyn"]
+[ext_resource type="Texture2D" uid="uid://cq16n5gken1r" path="res://assets/images/characters/starch/starch_jump.swf/frames/10.svg" id="23_hxidi"]
+[ext_resource type="Texture2D" uid="uid://ba60d3cspy6le" path="res://assets/images/characters/starch/starch_move.swf/frames/11.svg" id="24_k6jp7"]
+[ext_resource type="Texture2D" uid="uid://bfstrrnhrdigr" path="res://assets/images/characters/starch/starch_jump.swf/frames/11.svg" id="24_x14cs"]
+[ext_resource type="Texture2D" uid="uid://iai8suwoxxch" path="res://assets/images/characters/starch/starch_move.swf/frames/12.svg" id="25_6ksnf"]
+[ext_resource type="Texture2D" uid="uid://bsp7num2jbroe" path="res://assets/images/characters/starch/starch_jump.swf/frames/12.svg" id="25_ccojn"]
+[ext_resource type="Texture2D" uid="uid://cpkpgphi50wky" path="res://assets/images/characters/starch/starch_jump.swf/frames/13.svg" id="26_0qs4u"]
+[ext_resource type="Texture2D" uid="uid://dl3i5iqvq6406" path="res://assets/images/characters/starch/starch_jump.swf/frames/14.svg" id="27_2clkc"]
+[ext_resource type="Texture2D" uid="uid://cgs0j8d5h2d36" path="res://assets/images/characters/starch/starch_jump.swf/frames/15.svg" id="28_au12p"]
+[ext_resource type="Texture2D" uid="uid://dm1mpfwnr3rjk" path="res://assets/images/characters/starch/starch_jump.swf/frames/16.svg" id="29_renp1"]
+[ext_resource type="Texture2D" uid="uid://ct567p2v52vho" path="res://assets/images/characters/starch/starch_jump.swf/frames/17.svg" id="30_13aqs"]
+[ext_resource type="Texture2D" uid="uid://36q8fdoc1o5y" path="res://assets/images/characters/starch/starch_jump.swf/frames/18.svg" id="31_4yxwv"]
+[ext_resource type="Texture2D" uid="uid://t6qahuf2bgwo" path="res://assets/images/characters/starch/starch_jump.swf/frames/19.svg" id="32_vl87o"]
+[ext_resource type="Texture2D" uid="uid://if3chfp06rqq" path="res://assets/images/characters/starch/frames/1.svg" id="50_2f7xg"]
+[ext_resource type="Texture2D" uid="uid://qbrktuedy5wg" path="res://assets/images/characters/starch/frames/2.svg" id="51_84t4m"]
 
 [resource]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_6ksnf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_2pjaq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_2f7xg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_84t4m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_hxidi")
+}],
+"loop": false,
+"name": &"dive",
+"speed": 60.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("1_ir7i6")
@@ -74,6 +120,68 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": ExtResource("14_7bv8t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_lqv1o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_hr7nd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_3axyn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_k6jp7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_6ksnf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_2pjaq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_2f7xg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_84t4m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_hxidi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_x14cs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_ccojn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_0qs4u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_2clkc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_au12p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_renp1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_13aqs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_4yxwv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_vl87o")
+}],
+"loop": true,
+"name": &"jump",
+"speed": 60.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": ExtResource("14_6x3xa")
 }, {
 "duration": 1.0,
@@ -111,5 +219,16 @@ animations = [{
 }],
 "loop": true,
 "name": &"move",
+"speed": 60.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("50_2f7xg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("51_84t4m")
+}],
+"loop": true,
+"name": &"skid",
 "speed": 60.0
 }]

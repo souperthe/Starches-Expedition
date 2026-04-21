@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://b6dqgos8lqc81"]
+
+[ext_resource type="Script" uid="uid://bhmex5htvxvmu" path="res://assets/scripts/collision.gd" id="1_no267"]
+[ext_resource type="Texture2D" uid="uid://ccx28c20oxgyg" path="res://assets/images/debug/32x32.png" id="2_gtvhe"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_no267"]
+size = Vector2(16, 16)
+
+[node name="CollisionBlock" type="Node2D" unique_id=817451786]
+script = ExtResource("1_no267")
+
+[node name="32x32" type="Sprite2D" parent="." unique_id=1707176351]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_gtvhe")
+centered = false
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=866434644]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1480574209]
+position = Vector2(8, 8)
+shape = SubResource("RectangleShape2D_no267")

@@ -1,13 +1,74 @@
 [gd_scene format=3 uid="uid://3axwg5pp7esm"]
 
+[ext_resource type="Script" uid="uid://ci3aaw2g606qo" path="res://assets/scripts/player.gd" id="1_5pvfp"]
 [ext_resource type="SpriteFrames" uid="uid://ca67ep75bjo76" path="res://assets/resources/sprite_frames/frames_starch.tres" id="1_ikdab"]
+[ext_resource type="Script" uid="uid://ds64ad31eo4sj" path="res://assets/scripts/player_scripts/sound_manager.gd" id="2_bkysh"]
+[ext_resource type="Script" uid="uid://c0agmxl68sxc7" path="res://assets/scripts/player_scripts/animation_manager.gd" id="3_6r1sy"]
+[ext_resource type="Script" uid="uid://mb6q2b7sniup" path="res://assets/scripts/player_scripts/state_manager.gd" id="3_jg13i"]
+[ext_resource type="Script" uid="uid://eydo18aqrbyc" path="res://assets/scripts/player_scripts/player_states/idle.gd" id="5_nqkij"]
+[ext_resource type="Script" uid="uid://beee4srejmrka" path="res://assets/scripts/player_scripts/player_states/walk.gd" id="6_nqkij"]
+[ext_resource type="Script" uid="uid://hwkei6oawn0" path="res://assets/scripts/player_scripts/player_states/jump.gd" id="6_xvjlw"]
+[ext_resource type="Script" uid="uid://b24dm5mtwrqfr" path="res://assets/scripts/player_scripts/player_states/dive.gd" id="8_lvyht"]
+[ext_resource type="AudioStream" uid="uid://biahhbhctqb4g" path="res://assets/sound/sfx/step.wav" id="9_lvyht"]
 
-[node name="Player" type="CharacterBody2D" unique_id=1979464615]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5pvfp"]
+size = Vector2(15, 32)
 
-[node name="Animator" type="AnimatedSprite2D" parent="." unique_id=533695008]
-position = Vector2(0, -40)
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_htwuo"]
+random_pitch = 1.0656005
+streams_count = 1
+stream_0/stream = ExtResource("9_lvyht")
+
+[node name="Player" type="CharacterBody2D" unique_id=1979464615 node_paths=PackedStringArray("animationManager", "sprite")]
+floor_constant_speed = true
+floor_snap_length = 32.0
+script = ExtResource("1_5pvfp")
+animationManager = NodePath("AnimationManager")
+sprite = NodePath("SpritePivot/Animator")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=283525169]
+position = Vector2(-0.5, -16)
+shape = SubResource("RectangleShape2D_5pvfp")
+
+[node name="SoundManager" type="Node" parent="." unique_id=461190683 node_paths=PackedStringArray("soundHolder")]
+script = ExtResource("2_bkysh")
+soundHolder = NodePath("../Sounds")
+
+[node name="AnimationManager" type="Node" parent="." unique_id=1125274956 node_paths=PackedStringArray("_targetAnimator", "soundManager")]
+script = ExtResource("3_6r1sy")
+_targetAnimator = NodePath("../SpritePivot/Animator")
+soundManager = NodePath("../SoundManager")
+
+[node name="StateManager" type="Node" parent="." unique_id=1586120249 node_paths=PackedStringArray("_parentPlayer", "_initalState")]
+script = ExtResource("3_jg13i")
+_parentPlayer = NodePath("..")
+_initalState = NodePath("Idle")
+
+[node name="Idle" type="Node" parent="StateManager" unique_id=345682952]
+script = ExtResource("5_nqkij")
+
+[node name="Walk" type="Node" parent="StateManager" unique_id=2024924240]
+script = ExtResource("6_nqkij")
+
+[node name="Jump" type="Node" parent="StateManager" unique_id=1518533955]
+script = ExtResource("6_xvjlw")
+
+[node name="Dive" type="Node" parent="StateManager" unique_id=915606343]
+script = ExtResource("8_lvyht")
+
+[node name="SpritePivot" type="Node2D" parent="." unique_id=1446801159]
+scale = Vector2(0.15, 0.15)
+
+[node name="Animator" type="AnimatedSprite2D" parent="SpritePivot" unique_id=533695008]
+texture_filter = 2
+position = Vector2(0, -200.4)
 sprite_frames = ExtResource("1_ikdab")
-animation = &"idle"
-frame = 11
-frame_progress = 0.425062
+animation = &"skid"
+frame_progress = 0.14602001
 speed_scale = 0.25
+
+[node name="Sounds" type="Node2D" parent="." unique_id=1232175334]
+
+[node name="step" type="AudioStreamPlayer2D" parent="Sounds" unique_id=1133453487]
+stream = SubResource("AudioStreamRandomizer_htwuo")
+volume_db = -12.635
