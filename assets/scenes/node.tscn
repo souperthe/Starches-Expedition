@@ -3,6 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://3axwg5pp7esm" path="res://assets/objects/player.tscn" id="1_ecp26"]
 [ext_resource type="PackedScene" uid="uid://b6dqgos8lqc81" path="res://assets/objects/collision_block.tscn" id="2_166dq"]
 [ext_resource type="PackedScene" uid="uid://5c5g4i70g1mt" path="res://assets/objects/collision_slope.tscn" id="3_cx38m"]
+[ext_resource type="PackedScene" uid="uid://c4fxx2lj5iacm" path="res://assets/objects/collision_platform.tscn" id="4_idmui"]
 
 [node name="Node" type="Node2D" unique_id=553185642]
 
@@ -22,41 +23,37 @@ drag_right_margin = 0.05
 drag_bottom_margin = 0.05
 
 [node name="CollisionBlock" parent="." unique_id=817451786 instance=ExtResource("2_166dq")]
-position = Vector2(0, 224)
-scale = Vector2(24, 3)
+position = Vector2(0, 192)
+scale = Vector2(30, 4)
 
-[node name="CollisionSlope" parent="." unique_id=1832723659 instance=ExtResource("3_cx38m")]
-position = Vector2(384, 208)
-scale = Vector2(4, 1)
+[node name="CollisionSlope" parent="." unique_id=1455613374 instance=ExtResource("3_cx38m")]
+position = Vector2(480, 160)
+scale = Vector2(5, 2)
 
-[node name="CollisionSlope2" parent="." unique_id=1192474430 instance=ExtResource("3_cx38m")]
-position = Vector2(448, 192)
-scale = Vector2(2, 1)
+[node name="CollisionBlock2" parent="." unique_id=596811203 instance=ExtResource("2_166dq")]
+position = Vector2(560, 160)
+scale = Vector2(21, 6)
 
-[node name="CollisionBlock2" parent="." unique_id=465430224 instance=ExtResource("2_166dq")]
-position = Vector2(480, 192)
-scale = Vector2(24, 4)
+[node name="CollisionPlatform" parent="." unique_id=1957494163 instance=ExtResource("4_idmui")]
+position = Vector2(1024, 128)
+scale = Vector2(8, 1)
 
-[node name="CollisionBlock3" parent="." unique_id=1652444255 instance=ExtResource("2_166dq")]
-position = Vector2(960, 160.00002)
-scale = Vector2(10, 14)
+[node name="CollisionPlatform2" parent="." unique_id=1700821059 instance=ExtResource("4_idmui")]
+position = Vector2(1280, 96)
+scale = Vector2(8, 1)
 
-[node name="CollisionBlock4" parent="." unique_id=1670447945 instance=ExtResource("2_166dq")]
-position = Vector2(1216, 128)
-scale = Vector2(10, 12)
+[node name="CollisionBlock3" parent="." unique_id=763981345 instance=ExtResource("2_166dq")]
+position = Vector2(1536, 64)
+scale = Vector2(16, 16)
 
-[node name="CollisionBlock5" parent="." unique_id=585400052 instance=ExtResource("2_166dq")]
-position = Vector2(1472, 104)
-scale = Vector2(24, 24)
+[node name="CollisionSlope2" parent="." unique_id=1971859867 instance=ExtResource("3_cx38m")]
+position = Vector2(1888, 64)
+scale = Vector2(-6, 4)
 
-[node name="CollisionSlope3" parent="." unique_id=229793258 instance=ExtResource("3_cx38m")]
-position = Vector2(1984, 104)
-scale = Vector2(-8, 4)
+[node name="CollisionSlope3" parent="." unique_id=496786869 instance=ExtResource("3_cx38m")]
+position = Vector2(1984.0001, 128)
+scale = Vector2(-6, 3)
 
-[node name="CollisionSlope4" parent="." unique_id=1416664923 instance=ExtResource("3_cx38m")]
-position = Vector2(2112, 168)
-scale = Vector2(-8, 4)
-
-[node name="CollisionBlock6" parent="." unique_id=389700435 instance=ExtResource("2_166dq")]
-position = Vector2(2112, 232)
-scale = Vector2(50, 24)
+[node name="CollisionBlock4" parent="." unique_id=653289626 instance=ExtResource("2_166dq")]
+position = Vector2(1984, 176)
+scale = Vector2(30, 4)

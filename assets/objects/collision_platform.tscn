@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://c4fxx2lj5iacm"]
+
+[ext_resource type="PackedScene" uid="uid://b6dqgos8lqc81" path="res://assets/objects/collision_block.tscn" id="1_t2bhs"]
+[ext_resource type="Texture2D" uid="uid://du5ufehxbhqi7" path="res://assets/images/debug/32x32 platform.png" id="2_6688d"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_t2bhs"]
+size = Vector2(16, 8)
+
+[node name="CollisionPlatform" unique_id=817451786 instance=ExtResource("1_t2bhs")]
+
+[node name="32x32" parent="." index="0" unique_id=1707176351]
+texture = ExtResource("2_6688d")
+
+[node name="CollisionShape2D" parent="StaticBody2D" parent_id_path=PackedInt32Array(866434644) index="0" unique_id=1480574209]
+position = Vector2(8, 4)
+shape = SubResource("RectangleShape2D_t2bhs")
+one_way_collision = true

@@ -49,9 +49,7 @@ func stateProcess(delta:float) -> void:
 		stateManager.switchState("jump", "jumping")
 		return
 		
-	
-	if targetSpeed != 0:
-		player.velocity.x = move_toward(player.velocity.x, targetSpeed, walkAcceleration * delta)
+	player.velocity.x = move_toward(player.velocity.x, targetSpeed, walkAcceleration * delta)
 		
 	if Input.is_action_just_pressed("player_attack"):
 		stateManager.switchState("dive")

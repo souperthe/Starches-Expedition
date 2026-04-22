@@ -1,6 +1,6 @@
 extends PlayerState
 
-var deacceleration:float = 2500
+var deacceleration:float = 2500*1.5
 var minimumSpeed:float = 4.453125
 
 func stateEnter(_enterMessage:String) -> void:
