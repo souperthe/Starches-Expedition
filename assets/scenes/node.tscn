@@ -6,12 +6,21 @@
 [ext_resource type="Script" uid="uid://bj0w7eye8pxc6" path="res://assets/scripts/room_entrance.gd" id="5_4yusq"]
 [ext_resource type="AudioStream" uid="uid://b6yxkqo2jecrg" path="res://assets/sound/music/jazzyworld.wav" id="5_jil0d"]
 [ext_resource type="PackedScene" uid="uid://c4lhoo8iabyeb" path="res://assets/objects/coin.tscn" id="6_4yusq"]
+[ext_resource type="Script" uid="uid://ys4ijy3uag5c" path="res://assets/scripts/camera_limiter.gd" id="7_vh25t"]
 
 [node name="Node" type="Node2D" unique_id=553185642]
 
+[node name="CameraLimiter" type="Container" parent="." unique_id=719257743]
+z_index = 20
+offset_top = -112.0
+offset_right = 2464.0
+offset_bottom = 248.0
+script = ExtResource("7_vh25t")
+metadata/_custom_type_script = "uid://ys4ijy3uag5c"
+
 [node name="CollisionBlock" parent="." unique_id=817451786 instance=ExtResource("2_166dq")]
-position = Vector2(0, 192)
-scale = Vector2(30, 4)
+position = Vector2(-112, 192)
+scale = Vector2(38, 4)
 
 [node name="CollisionSlope" parent="." unique_id=1455613374 instance=ExtResource("3_cx38m")]
 position = Vector2(480, 160)
@@ -142,27 +151,22 @@ position = Vector2(1832, 88)
 [node name="Coin19" parent="." unique_id=137750864 instance=ExtResource("6_4yusq")]
 position = Vector2(1880, 120)
 
-[node name="Coin21" parent="." unique_id=771540527 instance=ExtResource("6_4yusq")]
-position = Vector2(1928, 144)
-
 [node name="CollisionBlock5" parent="." unique_id=2098675101 instance=ExtResource("2_166dq")]
 position = Vector2(2176, 72)
 scale = Vector2(8, 11)
 
 [node name="Coin18" parent="." unique_id=570799411 instance=ExtResource("6_4yusq")]
-position = Vector2(2048, 128)
+position = Vector2(1912, 120)
 
 [node name="Coin20" parent="." unique_id=839983526 instance=ExtResource("6_4yusq")]
-position = Vector2(2112, 88)
+position = Vector2(1976, 80)
 
 [node name="Coin22" parent="." unique_id=1406559851 instance=ExtResource("6_4yusq")]
-position = Vector2(2176, 64)
+position = Vector2(2040, 56)
 
 [node name="Coin24" parent="." unique_id=433683901 instance=ExtResource("6_4yusq")]
 position = Vector2(1856, 104)
 
-[node name="Coin25" parent="." unique_id=1710429545 instance=ExtResource("6_4yusq")]
-position = Vector2(1904, 136)
-
-[node name="Coin26" parent="." unique_id=1445775273 instance=ExtResource("6_4yusq")]
-position = Vector2(1952, 160)
+[node name="CollisionBlock6" parent="." unique_id=1110216198 instance=ExtResource("2_166dq")]
+position = Vector2(-32, -40)
+scale = Vector2(4, 20)
