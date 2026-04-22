@@ -1,0 +1,69 @@
+[gd_scene format=3 uid="uid://c4lhoo8iabyeb"]
+
+[ext_resource type="Script" uid="uid://cxllfgfbr56hd" path="res://assets/scripts/collectable.gd" id="1_tjtpe"]
+[ext_resource type="PackedScene" uid="uid://dnhr3yhag5axk" path="res://assets/objects/score_visual.tscn" id="2_3jwfu"]
+[ext_resource type="Texture2D" uid="uid://cgwx0aom8c28d" path="res://assets/images/collectables/frames/1.svg" id="2_6sni3"]
+[ext_resource type="Texture2D" uid="uid://kvujx7apgiwi" path="res://assets/images/collectables/frames/2.svg" id="3_3jwfu"]
+[ext_resource type="Texture2D" uid="uid://d2oklg1ba4c8s" path="res://assets/images/collectables/frames/3.svg" id="4_nqrkf"]
+[ext_resource type="Texture2D" uid="uid://b3q3al0u7df5e" path="res://assets/images/collectables/frames/4.svg" id="5_g7tkh"]
+[ext_resource type="Texture2D" uid="uid://ikidtb740kb6" path="res://assets/images/collectables/frames/5.svg" id="6_06tsv"]
+[ext_resource type="Texture2D" uid="uid://dqeppef8pctwf" path="res://assets/images/collectables/frames/6.svg" id="7_wpjy1"]
+[ext_resource type="Texture2D" uid="uid://6wr8ntpafeuy" path="res://assets/images/collectables/frames/7.svg" id="8_tikr0"]
+[ext_resource type="Texture2D" uid="uid://baa1eww8mie4j" path="res://assets/images/collectables/frames/8.svg" id="9_c4jkg"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_5s606"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_6sni3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_3jwfu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_nqrkf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_g7tkh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_06tsv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_wpjy1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_tikr0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_c4jkg")
+}],
+"loop": true,
+"name": &"default",
+"speed": 60.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_tjtpe"]
+radius = 16.0
+
+[node name="Coin" type="Node2D" unique_id=1043200656 node_paths=PackedStringArray("animator", "collectionArea")]
+script = ExtResource("1_tjtpe")
+value = null
+animator = NodePath("Animator")
+collectionArea = NodePath("CollectionArea")
+scoreVisual = ExtResource("2_3jwfu")
+coinType = null
+
+[node name="Animator" type="AnimatedSprite2D" parent="." unique_id=851144260]
+texture_filter = 2
+position = Vector2(0, -14.059998)
+scale = Vector2(0.15, 0.15)
+sprite_frames = SubResource("SpriteFrames_5s606")
+frame_progress = 0.08630043
+speed_scale = 0.25
+
+[node name="CollectionArea" type="Area2D" parent="." unique_id=1926867648]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CollectionArea" unique_id=10105483]
+position = Vector2(0, -14)
+shape = SubResource("CircleShape2D_tjtpe")

@@ -3,7 +3,9 @@
 [ext_resource type="PackedScene" uid="uid://b6dqgos8lqc81" path="res://assets/objects/collision_block.tscn" id="2_166dq"]
 [ext_resource type="PackedScene" uid="uid://5c5g4i70g1mt" path="res://assets/objects/collision_slope.tscn" id="3_cx38m"]
 [ext_resource type="PackedScene" uid="uid://c4fxx2lj5iacm" path="res://assets/objects/collision_platform.tscn" id="4_idmui"]
+[ext_resource type="Script" uid="uid://bj0w7eye8pxc6" path="res://assets/scripts/room_entrance.gd" id="5_4yusq"]
 [ext_resource type="AudioStream" uid="uid://b6yxkqo2jecrg" path="res://assets/sound/music/jazzyworld.wav" id="5_jil0d"]
+[ext_resource type="PackedScene" uid="uid://c4lhoo8iabyeb" path="res://assets/objects/coin.tscn" id="6_4yusq"]
 
 [node name="Node" type="Node2D" unique_id=553185642]
 
@@ -47,3 +49,89 @@ scale = Vector2(30, 4)
 stream = ExtResource("5_jil0d")
 volume_db = -15.0
 autoplay = true
+
+[node name="RoomEntrance" type="Node2D" parent="." unique_id=603092067]
+position = Vector2(128, 192)
+script = ExtResource("5_4yusq")
+targetEntrance = "START"
+metadata/_custom_type_script = "uid://bj0w7eye8pxc6"
+
+[node name="Coin" parent="." unique_id=1043200656 instance=ExtResource("6_4yusq")]
+position = Vector2(256, 192)
+value = 5
+coinType = "coin"
+
+[node name="Coin2" parent="." unique_id=864465695 instance=ExtResource("6_4yusq")]
+position = Vector2(280, 192)
+value = 5
+coinType = "coin"
+
+[node name="Coin3" parent="." unique_id=342202414 instance=ExtResource("6_4yusq")]
+position = Vector2(304, 192)
+value = 5
+coinType = "coin"
+
+[node name="Coin4" parent="." unique_id=1832577418 instance=ExtResource("6_4yusq")]
+position = Vector2(328, 192)
+value = 5
+coinType = "coin"
+
+[node name="Coin5" parent="." unique_id=1976581521 instance=ExtResource("6_4yusq")]
+position = Vector2(704, 160)
+value = 5
+coinType = "coin"
+
+[node name="Coin6" parent="." unique_id=1721457036 instance=ExtResource("6_4yusq")]
+position = Vector2(728, 160)
+value = 5
+coinType = "coin"
+
+[node name="Coin7" parent="." unique_id=357256423 instance=ExtResource("6_4yusq")]
+position = Vector2(752, 160)
+value = 5
+coinType = "coin"
+
+[node name="Coin8" parent="." unique_id=765192293 instance=ExtResource("6_4yusq")]
+position = Vector2(776, 160)
+value = 5
+coinType = "coin"
+
+[node name="Coin9" parent="." unique_id=2044179355 instance=ExtResource("6_4yusq")]
+position = Vector2(1056, 128)
+value = 5
+coinType = "coin"
+
+[node name="Coin10" parent="." unique_id=981566908 instance=ExtResource("6_4yusq")]
+position = Vector2(1080, 128)
+value = 5
+coinType = "coin"
+
+[node name="Coin11" parent="." unique_id=2036368186 instance=ExtResource("6_4yusq")]
+position = Vector2(1104, 128)
+value = 5
+coinType = "coin"
+
+[node name="Coin12" parent="." unique_id=674407791 instance=ExtResource("6_4yusq")]
+position = Vector2(1128, 128)
+value = 5
+coinType = "coin"
+
+[node name="Coin13" parent="." unique_id=1622303316 instance=ExtResource("6_4yusq")]
+position = Vector2(1312, 96)
+value = 5
+coinType = "coin"
+
+[node name="Coin14" parent="." unique_id=1135884595 instance=ExtResource("6_4yusq")]
+position = Vector2(1336, 96)
+value = 5
+coinType = "coin"
+
+[node name="Coin15" parent="." unique_id=1629938949 instance=ExtResource("6_4yusq")]
+position = Vector2(1360, 96)
+value = 5
+coinType = "coin"
+
+[node name="Coin16" parent="." unique_id=492682240 instance=ExtResource("6_4yusq")]
+position = Vector2(1384, 96)
+value = 5
+coinType = "coin"

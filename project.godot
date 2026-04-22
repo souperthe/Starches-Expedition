@@ -18,6 +18,9 @@ config/features=PackedStringArray("4.6", "GL Compatibility")
 
 CommonSignals="*uid://mrt3vv2n3xfk"
 CurrentPlayer="*uid://3axwg5pp7esm"
+CurrentCamera="*uid://cx05awdxbrtyv"
+EntranceManager="*uid://cerriail2i1po"
+Global="*uid://63gs0ie5fnju"
 
 [display]
 
