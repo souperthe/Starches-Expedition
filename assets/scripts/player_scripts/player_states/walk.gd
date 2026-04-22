@@ -2,7 +2,6 @@ extends PlayerState
 
 var walkAcceleration:float = 950
 var currentAcceleration:float = 0
-var walkSpeed:float = 93.75*4
 var currentAnimationSpeed:float = 0.4
 var slopeAngle:float = 0
 var slopeInfuence:float = 2
@@ -36,8 +35,8 @@ func stateProcess(delta:float) -> void:
 		return
 		
 	var targetAnimationSpeed:float = 0.5
-	var targetSpeed:float = player.controlDirection.x * (walkSpeed*1.2)
-	player.lastSpeed = (walkSpeed*1.2)
+	var targetSpeed:float = player.controlDirection.x * (player.walkSpeed*1.2)
+	player.lastSpeed = (player.walkSpeed*1.2)
 	currentAcceleration = walkAcceleration
 	
 	var floorNormal:Vector2 = player.get_floor_normal()
@@ -48,14 +47,14 @@ func stateProcess(delta:float) -> void:
 	
 	
 	if (!Input.is_action_pressed("player_run")):
-		targetSpeed = player.controlDirection.x * (walkSpeed/2)
-		player.lastSpeed = (walkSpeed/1.5)
+		targetSpeed = player.controlDirection.x * (player.walkSpeed/2)
+		player.lastSpeed = (player.walkSpeed/1.5)
 		currentAcceleration = walkAcceleration
 		targetAnimationSpeed = 0.4
 		
 	currentAnimationSpeed = lerpf(currentAnimationSpeed, targetAnimationSpeed, 12 * delta)
 	
-	var speedScale:float = abs(player.velocity.x) / walkSpeed
+	var speedScale:float = abs(player.velocity.x) / player.walkSpeed
 	speedScale = speedScale * currentAnimationSpeed
 	
 	speedScale = clampf(speedScale, 0.15, 0.9)

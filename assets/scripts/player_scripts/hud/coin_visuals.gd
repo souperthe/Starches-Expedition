@@ -9,11 +9,12 @@ func _tweenFinished(visual:Node2D, currentScore:int) -> void:
 
 func _tweenTo(visual:Node2D, visualGoto:Vector2, currentScore:int) -> void:
 	var currentSize:Vector2 = visual.scale
-	var glideTime:float = 0.7
+	var sizeGoal:Vector2 = currentSize/2
+	var glideTime:float = 0.35
 	var glideTween:Tween = get_tree().create_tween()
 	glideTween.set_parallel(true)
 	glideTween.tween_property(visual, "position", visualGoto, glideTime)
-	glideTween.tween_property(visual, "scale", currentSize/1.7, glideTime)
+	glideTween.tween_property(visual, "scale", sizeGoal, glideTime)
 	
 	var finishedCallable:Callable = func():
 		_tweenFinished(visual, currentScore)
@@ -28,6 +29,8 @@ func _createVisual(_visualType:String, visualAnimator:AnimatedSprite2D, currentS
 	var clonedSprite:AnimatedSprite2D = visualAnimator.duplicate()
 	
 	clonedSprite.position = screenPosition
+	clonedSprite.play("default")
+	clonedSprite.frame = visualAnimator.frame
 	clonedSprite.scale *= 2
 	
 	

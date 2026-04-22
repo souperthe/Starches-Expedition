@@ -3,11 +3,12 @@ class_name Player extends CharacterBody2D
 var runPhysics:bool = true
 var wishDirection:Vector2
 var controlDirection:Vector2
+var walkSpeed:float = 93.75*4
 
 var gravityScale:float = 1887.5
 var lastSpeed:float = 0
 var coyoteTime:float = 0
-var coyoteTimeMax:float = 5
+var coyoteTimeMax:float = 8
 
 
 @export var animationManager:AnimationManager

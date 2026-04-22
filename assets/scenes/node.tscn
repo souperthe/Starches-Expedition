@@ -135,3 +135,34 @@ coinType = "coin"
 position = Vector2(1384, 96)
 value = 5
 coinType = "coin"
+
+[node name="Coin17" parent="." unique_id=1044977656 instance=ExtResource("6_4yusq")]
+position = Vector2(1832, 88)
+
+[node name="Coin19" parent="." unique_id=137750864 instance=ExtResource("6_4yusq")]
+position = Vector2(1880, 120)
+
+[node name="Coin21" parent="." unique_id=771540527 instance=ExtResource("6_4yusq")]
+position = Vector2(1928, 144)
+
+[node name="CollisionBlock5" parent="." unique_id=2098675101 instance=ExtResource("2_166dq")]
+position = Vector2(2176, 72)
+scale = Vector2(8, 11)
+
+[node name="Coin18" parent="." unique_id=570799411 instance=ExtResource("6_4yusq")]
+position = Vector2(2048, 128)
+
+[node name="Coin20" parent="." unique_id=839983526 instance=ExtResource("6_4yusq")]
+position = Vector2(2112, 88)
+
+[node name="Coin22" parent="." unique_id=1406559851 instance=ExtResource("6_4yusq")]
+position = Vector2(2176, 64)
+
+[node name="Coin24" parent="." unique_id=433683901 instance=ExtResource("6_4yusq")]
+position = Vector2(1856, 104)
+
+[node name="Coin25" parent="." unique_id=1710429545 instance=ExtResource("6_4yusq")]
+position = Vector2(1904, 136)
+
+[node name="Coin26" parent="." unique_id=1445775273 instance=ExtResource("6_4yusq")]
+position = Vector2(1952, 160)

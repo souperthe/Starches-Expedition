@@ -51,6 +51,9 @@ func stateProcess(delta:float) -> void:
 		stateManager.switchState("jump", "jumping")
 		return
 		
+	if player.controlDirection.x != 0:
+		player.sprite.scale.x = player.controlDirection.x
+		
 	player.velocity.x = move_toward(player.velocity.x, targetSpeed, walkAcceleration * delta)
 		
 	if Input.is_action_just_pressed("player_attack"):

@@ -2,6 +2,7 @@ class_name HUDGeneral extends Control
 
 @export var coinLabel:Label
 @export var coinIcon:TextureRect
+@export var coinCollect:AudioStreamPlayer
 
 var coinCurentTween:Tween
 
@@ -11,10 +12,11 @@ func _updateCoins(currentScore:int) -> void:
 		coinCurentTween.kill()
 	
 	coinLabel.text = str(currentScore)
-	coinIcon.scale = Vector2(0.25,0.25)
+	coinIcon.scale = Vector2(0.3,0.3)
 	
 	coinCurentTween = get_tree().create_tween()
-	coinCurentTween.tween_property(coinIcon, "scale", Vector2(0.15, 0.15), 0.2)
+	coinCurentTween.tween_property(coinIcon, "scale", Vector2(0.15, 0.15), 0.1)
+	coinCollect.play()
 	return
 	
 func _ready() -> void:

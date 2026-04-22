@@ -12,6 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://cjdr20ylm27l0" path="res://assets/images/hud/general/hud_coin.swf/frames/1.svg" id="8_0qdgq"]
 [ext_resource type="Texture2D" uid="uid://bj8uppj3v5o0k" path="res://assets/images/hud/general/hud_coin.swf/frames/2.svg" id="9_3adly"]
 [ext_resource type="Script" uid="uid://c1qeuehf38ha7" path="res://assets/scripts/player_scripts/hud/coin_visuals.gd" id="11_6xpvq"]
+[ext_resource type="AudioStream" uid="uid://bnu2y4e77isto" path="res://assets/sound/sfx/freesound_community-coin-flip-37787.wav" id="13_x32s3"]
 
 [sub_resource type="Animation" id="Animation_2nd5j"]
 length = 0.001
@@ -184,6 +185,11 @@ frame_0/texture = ExtResource("8_0qdgq")
 frame_1/texture = ExtResource("9_3adly")
 frame_1/duration = 1.0
 
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_omcjk"]
+random_pitch = 1.0656005
+streams_count = 1
+stream_0/stream = ExtResource("13_x32s3")
+
 [node name="PlayerHUD" type="CanvasLayer" unique_id=2104762548]
 script = ExtResource("1_yt60p")
 
@@ -252,7 +258,7 @@ texture = ExtResource("4_o8weo")
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Intro" unique_id=1666851795]
 libraries/ = SubResource("AnimationLibrary_0qdgq")
 
-[node name="RegularHud" type="Control" parent="." unique_id=1529701522 node_paths=PackedStringArray("coinLabel", "coinIcon")]
+[node name="RegularHud" type="Control" parent="." unique_id=1529701522 node_paths=PackedStringArray("coinLabel", "coinIcon", "coinCollect")]
 modulate = Color(1, 1, 1, 0)
 layout_mode = 3
 anchors_preset = 15
@@ -263,6 +269,7 @@ grow_vertical = 2
 script = ExtResource("6_3607w")
 coinLabel = NodePath("CoinIcon/Label")
 coinIcon = NodePath("CoinIcon/TextureRect")
+coinCollect = NodePath("CoinIcon/CoinCollect")
 
 [node name="HealthIcon" type="Control" parent="RegularHud" unique_id=2003791765]
 anchors_preset = 0
@@ -337,3 +344,8 @@ offset_left = 28.750008
 offset_top = 37.499992
 offset_right = 68.75
 offset_bottom = 77.5
+
+[node name="CoinCollect" type="AudioStreamPlayer" parent="RegularHud/CoinIcon" unique_id=671322426]
+stream = SubResource("AudioStreamRandomizer_omcjk")
+volume_db = -25.994
+pitch_scale = 1.5
