@@ -1,26 +1,11 @@
 [gd_scene format=3 uid="uid://8n0pad1lk48h"]
 
-[ext_resource type="PackedScene" uid="uid://3axwg5pp7esm" path="res://assets/objects/player.tscn" id="1_ecp26"]
 [ext_resource type="PackedScene" uid="uid://b6dqgos8lqc81" path="res://assets/objects/collision_block.tscn" id="2_166dq"]
 [ext_resource type="PackedScene" uid="uid://5c5g4i70g1mt" path="res://assets/objects/collision_slope.tscn" id="3_cx38m"]
 [ext_resource type="PackedScene" uid="uid://c4fxx2lj5iacm" path="res://assets/objects/collision_platform.tscn" id="4_idmui"]
+[ext_resource type="AudioStream" uid="uid://b6yxkqo2jecrg" path="res://assets/sound/music/jazzyworld.wav" id="5_jil0d"]
 
 [node name="Node" type="Node2D" unique_id=553185642]
-
-[node name="Player" parent="." unique_id=1979464615 instance=ExtResource("1_ecp26")]
-position = Vector2(100, 177)
-
-[node name="Camera2D" type="Camera2D" parent="Player" unique_id=2094179752]
-position = Vector2(0, -19)
-zoom = Vector2(2, 2)
-limit_left = 0
-limit_bottom = 250
-drag_horizontal_enabled = true
-drag_vertical_enabled = true
-drag_left_margin = 0.05
-drag_top_margin = 0.05
-drag_right_margin = 0.05
-drag_bottom_margin = 0.05
 
 [node name="CollisionBlock" parent="." unique_id=817451786 instance=ExtResource("2_166dq")]
 position = Vector2(0, 192)
@@ -57,3 +42,8 @@ scale = Vector2(-6, 3)
 [node name="CollisionBlock4" parent="." unique_id=653289626 instance=ExtResource("2_166dq")]
 position = Vector2(1984, 176)
 scale = Vector2(30, 4)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=475177727]
+stream = ExtResource("5_jil0d")
+volume_db = -15.0
+autoplay = true

@@ -14,6 +14,8 @@ func stateEnter(_enterMessage:String) -> void:
 	if _enterMessage != "jumping":
 		return
 		
+	player.soundManager.playSound("jump")
+		
 	player.coyoteTime = player.coyoteTimeMax
 		
 	jumpLetGo = false

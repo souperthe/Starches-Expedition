@@ -6,12 +6,15 @@ var walkSpeed:float = 93.75*4
 var currentAnimationSpeed:float = 0.4
 var slopeAngle:float = 0
 var slopeInfuence:float = 2
+var skidPlaying:bool = false
 
 func stateEnter(_enterMessage:String) -> void:
 	animator.animationPlay("move", 0.25)
+	skidPlaying = false
 	return
 	
 func stateExit(_exitMessage:String) -> void:
+	player.soundManager.stopSound("skid")
 	return
 	
 func stateProcess(delta:float) -> void:
@@ -66,8 +69,16 @@ func stateProcess(delta:float) -> void:
 	if isSkidding:
 		animator.animationPlay("skid", 0.3)
 		effectiveAccel = effectiveAccel * 2
+		
+		if not(skidPlaying):
+			player.soundManager.playSound("skid", 1.2)
+			skidPlaying = true
 	else:
 		animator.animationPlay("move", speedScale)
+		
+		if skidPlaying:
+			player.soundManager.stopSound("skid")
+			skidPlaying = false
 		
 	player.velocity.x = move_toward(player.velocity.x, effectiveTarget, effectiveAccel * delta)
 

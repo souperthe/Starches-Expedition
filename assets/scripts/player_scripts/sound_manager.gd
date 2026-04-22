@@ -24,7 +24,7 @@ func stopSound(soundName:String) -> void:
 		
 	var targetSound:AudioStreamPlayer2D = _sounds[soundName]
 	
-	targetSound.play()
+	targetSound.stop()
 	return
 
 func _ready() -> void:

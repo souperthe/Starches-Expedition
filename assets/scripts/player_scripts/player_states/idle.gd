@@ -5,6 +5,9 @@ var minimumSpeed:float = 4.453125
 
 func stateEnter(_enterMessage:String) -> void:
 	animator.animationPlay("idle", 0.1)
+	
+	if _enterMessage == "landing":
+		player.soundManager.playSound("step")
 	return
 	
 func stateExit(_exitMessage:String) -> void:

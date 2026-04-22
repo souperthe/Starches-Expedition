@@ -11,6 +11,7 @@ var coyoteTimeMax:float = 5
 
 
 @export var animationManager:AnimationManager
+@export var stateManager:StateManager
 @export var soundManager:SoundManager
 @export var sprite:AnimatedSprite2D
 
