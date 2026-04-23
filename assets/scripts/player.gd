@@ -4,6 +4,8 @@ var runPhysics:bool = true
 var wishDirection:Vector2
 var controlDirection:Vector2
 var walkSpeed:float = 93.75*4
+var maxHealth:int = 3
+var health:int = 3
 
 var gravityScale:float = 1887.5
 var lastSpeed:float = 0

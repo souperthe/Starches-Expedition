@@ -21,6 +21,7 @@ CurrentPlayer="*uid://3axwg5pp7esm"
 CurrentCamera="*uid://cx05awdxbrtyv"
 EntranceManager="*uid://cerriail2i1po"
 Global="*uid://63gs0ie5fnju"
+ScoreManager="*uid://dh3e1822iaycn"
 
 [display]
 

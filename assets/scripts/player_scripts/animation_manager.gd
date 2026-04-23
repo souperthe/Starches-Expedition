@@ -9,6 +9,7 @@ var _stepSoundData:Dictionary[String, PackedInt32Array] = {
 
 var _animationNames:Dictionary[String, String] = {}
 var animationCurrent:String
+var animationFinished:bool = false
 var currentFrame:int = 0
 
 func _onFrameChanged() -> void:
@@ -31,6 +32,15 @@ func _onFrameChanged() -> void:
 	soundManager.playSound("step")
 	
 	return
+	
+func _onAnimationChanged() -> void:
+	animationFinished = false
+	return
+	
+func _onAnimationFinished() -> void:
+	animationFinished = true
+	return
+
 
 func _ready() -> void:
 	
@@ -43,6 +53,8 @@ func _ready() -> void:
 		continue
 		
 	_targetAnimator.frame_changed.connect(_onFrameChanged)
+	_targetAnimator.animation_changed.connect(_onAnimationChanged)
+	_targetAnimator.animation_finished.connect(_onAnimationFinished)
 		
 	return
 	

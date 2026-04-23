@@ -48,6 +48,16 @@
 [ext_resource type="Texture2D" uid="uid://ct567p2v52vho" path="res://assets/images/characters/starch/starch_jump.swf/frames/17.svg" id="30_13aqs"]
 [ext_resource type="Texture2D" uid="uid://36q8fdoc1o5y" path="res://assets/images/characters/starch/starch_jump.swf/frames/18.svg" id="31_4yxwv"]
 [ext_resource type="Texture2D" uid="uid://t6qahuf2bgwo" path="res://assets/images/characters/starch/starch_jump.swf/frames/19.svg" id="32_vl87o"]
+[ext_resource type="Texture2D" uid="uid://bghormqfbicp5" path="res://assets/images/characters/starch/starch_levelstart.swf/frames/1.png" id="37_0qs4u"]
+[ext_resource type="Texture2D" uid="uid://id1qx807j6x8" path="res://assets/images/characters/starch/starch_land.swf/frames/1.png" id="37_13aqs"]
+[ext_resource type="Texture2D" uid="uid://foe21wae7wtr" path="res://assets/images/characters/starch/starch_levelstart.swf/frames/2.png" id="38_2clkc"]
+[ext_resource type="Texture2D" uid="uid://c21jmma3kj6py" path="res://assets/images/characters/starch/starch_land.swf/frames/2.png" id="38_4yxwv"]
+[ext_resource type="Texture2D" uid="uid://bnd1een2d6v61" path="res://assets/images/characters/starch/starch_levelstart.swf/frames/3.png" id="39_au12p"]
+[ext_resource type="Texture2D" uid="uid://c601vuhd8n31y" path="res://assets/images/characters/starch/starch_land.swf/frames/3.png" id="39_vl87o"]
+[ext_resource type="Texture2D" uid="uid://b78vq1fv3ylty" path="res://assets/images/characters/starch/starch_land.swf/frames/4.png" id="40_jnm70"]
+[ext_resource type="Texture2D" uid="uid://djbki1fw1e8bg" path="res://assets/images/characters/starch/starch_levelstart.swf/frames/4.png" id="40_renp1"]
+[ext_resource type="Texture2D" uid="uid://t7b2y1rb47mn" path="res://assets/images/characters/starch/starch_levelstart.swf/frames/5.png" id="41_13aqs"]
+[ext_resource type="Texture2D" uid="uid://dfbvvsjogw31u" path="res://assets/images/characters/starch/starch_levelstart.swf/frames/6.png" id="42_4yxwv"]
 [ext_resource type="Texture2D" uid="uid://if3chfp06rqq" path="res://assets/images/characters/starch/frames/1.svg" id="50_2f7xg"]
 [ext_resource type="Texture2D" uid="uid://qbrktuedy5wg" path="res://assets/images/characters/starch/frames/2.svg" id="51_84t4m"]
 
@@ -174,6 +184,46 @@ animations = [{
 }],
 "loop": false,
 "name": &"jump",
+"speed": 60.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("37_13aqs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38_4yxwv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("39_vl87o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("40_jnm70")
+}],
+"loop": false,
+"name": &"land",
+"speed": 60.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("37_0qs4u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38_2clkc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("39_au12p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("40_renp1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("41_13aqs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("42_4yxwv")
+}],
+"loop": true,
+"name": &"level_start",
 "speed": 60.0
 }, {
 "frames": [{

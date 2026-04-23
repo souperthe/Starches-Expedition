@@ -26,7 +26,7 @@ func _createScoreVisual(targetValue:int) -> void:
 	newVisual.modulate = visualColor
 	newVisual.label.text = additionSign + str(targetValue)
 	
-	CommonSignals.createCoinVisual.emit(coinType, animator, Global.currentScore)
+	CommonSignals.createCoinVisual.emit(coinType, animator, ScoreManager.currentScore)
 	
 	get_tree().current_scene.add_child(newVisual)
 	
@@ -40,7 +40,8 @@ func _bodyEntered(node:Node) -> void:
 	if node != CurrentPlayer:
 		return
 		
-	Global.currentScore += value
+	ScoreManager.currentScore += value
+	ScoreManager.coinCollected.play()
 	_createScoreVisual(value)
 	queue_free()
 	return

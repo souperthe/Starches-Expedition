@@ -7,6 +7,7 @@ func stateEnter(_enterMessage:String) -> void:
 	
 	if _enterMessage == "landing":
 		player.soundManager.playSound("step")
+		animator.animationPlay("land", 0.4)
 	return
 	
 func stateExit(_exitMessage:String) -> void:
@@ -31,7 +32,7 @@ func stateProcess(delta:float) -> void:
 	if abs(player.velocity.x) < minimumSpeed:
 		player.velocity.x = 0.0
 		
-		if animator.animationCurrent != "idle":
+		if animator.animationCurrent != "idle" and animator.animationCurrent != "land":
 			animator.animationPlay("idle", 0.1)
 	else:
 		var speedScale:float = abs(player.velocity.x) / player.walkSpeed

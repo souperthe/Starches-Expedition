@@ -10,6 +10,7 @@ func _introPlay() -> void:
 	show()
 	animator.play("play_intro")
 	CurrentPlayer.stateManager.switchState("actor")
+	CurrentPlayer.animationManager.animationPlay("level_start", 0.3)
 	return
 
 func _ready() -> void:

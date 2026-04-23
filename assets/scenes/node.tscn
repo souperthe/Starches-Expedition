@@ -12,9 +12,9 @@
 
 [node name="CameraLimiter" type="Container" parent="." unique_id=719257743]
 z_index = 20
-offset_top = -112.0
-offset_right = 2464.0
-offset_bottom = 248.0
+offset_top = -320.0
+offset_right = 4848.0
+offset_bottom = 256.0
 script = ExtResource("7_vh25t")
 metadata/_custom_type_script = "uid://ys4ijy3uag5c"
 
@@ -52,11 +52,11 @@ scale = Vector2(-6, 3)
 
 [node name="CollisionBlock4" parent="." unique_id=653289626 instance=ExtResource("2_166dq")]
 position = Vector2(1984, 176)
-scale = Vector2(30, 4)
+scale = Vector2(20, 4)
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=475177727]
 stream = ExtResource("5_jil0d")
-volume_db = -15.0
+volume_db = -6.789
 autoplay = true
 
 [node name="RoomEntrance" type="Node2D" parent="." unique_id=603092067]
@@ -147,26 +147,128 @@ coinType = "coin"
 
 [node name="Coin17" parent="." unique_id=1044977656 instance=ExtResource("6_4yusq")]
 position = Vector2(1832, 88)
+value = 5
+coinType = "coin"
 
 [node name="Coin19" parent="." unique_id=137750864 instance=ExtResource("6_4yusq")]
 position = Vector2(1880, 120)
+value = 5
+coinType = "coin"
 
 [node name="CollisionBlock5" parent="." unique_id=2098675101 instance=ExtResource("2_166dq")]
-position = Vector2(2176, 72)
+position = Vector2(2176, 64)
 scale = Vector2(8, 11)
 
 [node name="Coin18" parent="." unique_id=570799411 instance=ExtResource("6_4yusq")]
 position = Vector2(1912, 120)
+value = 5
+coinType = "coin"
 
 [node name="Coin20" parent="." unique_id=839983526 instance=ExtResource("6_4yusq")]
 position = Vector2(1976, 80)
+value = 5
+coinType = "coin"
 
 [node name="Coin22" parent="." unique_id=1406559851 instance=ExtResource("6_4yusq")]
 position = Vector2(2040, 56)
+value = 5
+coinType = "coin"
 
 [node name="Coin24" parent="." unique_id=433683901 instance=ExtResource("6_4yusq")]
 position = Vector2(1856, 104)
+value = 5
+coinType = "coin"
 
 [node name="CollisionBlock6" parent="." unique_id=1110216198 instance=ExtResource("2_166dq")]
 position = Vector2(-32, -40)
 scale = Vector2(4, 20)
+
+[node name="CollisionBlock7" parent="." unique_id=147230391 instance=ExtResource("2_166dq")]
+position = Vector2(2304, 128)
+scale = Vector2(24, 3)
+
+[node name="CollisionSlope4" parent="." unique_id=1272405594 instance=ExtResource("3_cx38m")]
+position = Vector2(2751.9998, 128)
+scale = Vector2(-4, 2)
+
+[node name="CollisionSlope5" parent="." unique_id=72002067 instance=ExtResource("3_cx38m")]
+position = Vector2(2815.9998, 160)
+scale = Vector2(-4, 2)
+
+[node name="CollisionBlock8" parent="." unique_id=702569724 instance=ExtResource("2_166dq")]
+position = Vector2(2815.9998, 192)
+scale = Vector2(32, 1)
+
+[node name="CollisionPlatform3" parent="." unique_id=833824623 instance=ExtResource("4_idmui")]
+position = Vector2(2944, 80)
+scale = Vector2(16, 1)
+
+[node name="CollisionSlope6" parent="." unique_id=2127760066 instance=ExtResource("3_cx38m")]
+position = Vector2(2912, 80)
+scale = Vector2(2, 1)
+
+[node name="CollisionSlope7" parent="." unique_id=1026918697 instance=ExtResource("3_cx38m")]
+position = Vector2(3232, 80)
+scale = Vector2(-2, 1)
+
+[node name="Coin21" parent="." unique_id=1830943858 instance=ExtResource("6_4yusq")]
+position = Vector2(2976, 80)
+
+[node name="Coin23" parent="." unique_id=2084131603 instance=ExtResource("6_4yusq")]
+position = Vector2(3024, 80)
+
+[node name="Coin25" parent="." unique_id=970676347 instance=ExtResource("6_4yusq")]
+position = Vector2(3072, 80)
+
+[node name="Coin26" parent="." unique_id=333089186 instance=ExtResource("6_4yusq")]
+position = Vector2(3120, 80)
+
+[node name="Coin27" parent="." unique_id=187744013 instance=ExtResource("6_4yusq")]
+position = Vector2(3168, 80)
+
+[node name="CollisionSlope8" parent="." unique_id=1622052851 instance=ExtResource("3_cx38m")]
+position = Vector2(3392, 128)
+scale = Vector2(4, 2)
+
+[node name="CollisionSlope9" parent="." unique_id=626405396 instance=ExtResource("3_cx38m")]
+position = Vector2(3328, 160)
+scale = Vector2(4, 2)
+
+[node name="CollisionSlope10" parent="." unique_id=2038043494 instance=ExtResource("3_cx38m")]
+position = Vector2(3456, 96)
+scale = Vector2(4, 2)
+
+[node name="CollisionBlock9" parent="." unique_id=827547369 instance=ExtResource("2_166dq")]
+position = Vector2(3520, 96)
+scale = Vector2(8, 11)
+
+[node name="CollisionBlock10" parent="." unique_id=668365911 instance=ExtResource("2_166dq")]
+position = Vector2(3760, 48)
+scale = Vector2(12, 20)
+
+[node name="Coin28" parent="." unique_id=436588224 instance=ExtResource("6_4yusq")]
+position = Vector2(2976, 192)
+
+[node name="Coin29" parent="." unique_id=1652757434 instance=ExtResource("6_4yusq")]
+position = Vector2(3024, 192)
+
+[node name="Coin30" parent="." unique_id=1891887739 instance=ExtResource("6_4yusq")]
+position = Vector2(3072, 192)
+
+[node name="Coin31" parent="." unique_id=1369760812 instance=ExtResource("6_4yusq")]
+position = Vector2(3120, 192)
+
+[node name="Coin32" parent="." unique_id=1436956000 instance=ExtResource("6_4yusq")]
+position = Vector2(3168, 192)
+
+[node name="CollisionBlock11" parent="." unique_id=1829857237 instance=ExtResource("2_166dq")]
+position = Vector2(4048, 0)
+scale = Vector2(12, 20)
+
+[node name="CollisionBlock12" parent="." unique_id=1816935718 instance=ExtResource("2_166dq")]
+position = Vector2(4336, -47.999992)
+scale = Vector2(12, 20)
+
+[node name="CollisionBlock13" parent="." unique_id=447800045 instance=ExtResource("2_166dq")]
+position = Vector2(4608, -95.999985)
+scale = Vector2(12, 20)

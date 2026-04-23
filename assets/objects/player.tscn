@@ -83,23 +83,25 @@ scale = Vector2(0.15, 0.15)
 texture_filter = 2
 position = Vector2(0, -200.4)
 sprite_frames = ExtResource("1_ikdab")
-animation = &"dive"
+animation = &"land"
+frame = 3
+frame_progress = 1.0
 speed_scale = 0.25
 
 [node name="Sounds" type="Node2D" parent="." unique_id=1232175334]
 
 [node name="step" type="AudioStreamPlayer2D" parent="Sounds" unique_id=1133453487]
 stream = SubResource("AudioStreamRandomizer_htwuo")
-volume_db = -12.635
+volume_db = -8.888
 
 [node name="jump" type="AudioStreamPlayer2D" parent="Sounds" unique_id=1160888657]
 stream = SubResource("AudioStreamRandomizer_34ecl")
-volume_db = -12.635
+volume_db = 2.776
 pitch_scale = 1.2
 
 [node name="skid" type="AudioStreamPlayer2D" parent="Sounds" unique_id=1153751321]
 stream = SubResource("AudioStreamRandomizer_fg3d2")
-volume_db = -33.467
+volume_db = -18.607
 pitch_scale = 1.2
 
 [node name="PlayerHUD" parent="." unique_id=2104762548 instance=ExtResource("14_1qp14")]
