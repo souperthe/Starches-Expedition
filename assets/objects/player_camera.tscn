@@ -4,7 +4,6 @@
 
 [node name="PlayerCamera" type="Camera2D" unique_id=1889887481]
 process_mode = 3
-physics_interpolation_mode = 2
 ignore_rotation = false
 zoom = Vector2(2, 2)
 drag_horizontal_enabled = true
