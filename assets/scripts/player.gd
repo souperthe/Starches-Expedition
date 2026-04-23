@@ -1,5 +1,6 @@
 class_name Player extends CharacterBody2D
 
+var playerIndex:int = 0
 var runPhysics:bool = true
 var wishDirection:Vector2
 var controlDirection:Vector2
@@ -14,17 +15,25 @@ var coyoteTimeMax:float = 8
 var lastGroundedPosition:Vector2
 var lastAirbornePosition:Vector2
 
-
 @export var animationManager:AnimationManager
 @export var fallzoneManager:FallzoneManager
 @export var stateManager:StateManager
 @export var soundManager:SoundManager
 @export var sprite:AnimatedSprite2D
 
+
+var inputJump:String = "player_jump"
+var inputAttack:String = "player_attack"
+var inputSprint:String = "player_run"
+var inputLeft:String = "player_left"
+var inputRight:String = "player_right"
+var inputUp:String = "player_up"
+var inputDown:String = "player_down"
+
 func _process(_delta: float) -> void:
-	wishDirection = Input.get_vector("player_left", "player_right", "player_down", "player_up")
-	controlDirection.x = floorf(Input.get_axis("player_left", "player_right"))
-	controlDirection.y = floorf(Input.get_axis("player_down", "player_up"))
+	wishDirection = Input.get_vector(inputLeft, inputRight, inputDown, inputUp)
+	controlDirection.x = floorf(Input.get_axis(inputLeft, inputRight))
+	controlDirection.y = floorf(Input.get_axis(inputDown, inputUp))
 	
 	if is_on_floor():
 		lastGroundedPosition = position

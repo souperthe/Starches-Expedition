@@ -48,7 +48,7 @@ func stateProcess(delta:float) -> void:
 	
 	player.coyoteTime -= 30 * delta
 	
-	if player.coyoteTime > 0 and Input.is_action_just_pressed("player_jump"):
+	if player.coyoteTime > 0 and Input.is_action_just_pressed(player.inputJump):
 		stateManager.switchState("jump", "jumping")
 		player.coyoteTime = -500
 		return
@@ -58,11 +58,11 @@ func stateProcess(delta:float) -> void:
 		
 	player.velocity.x = move_toward(player.velocity.x, targetSpeed, walkAcceleration * delta)
 		
-	if Input.is_action_just_pressed("player_attack"):
+	if Input.is_action_just_pressed(player.inputAttack):
 		stateManager.switchState("dive")
 		return
 
-	if not(Input.is_action_pressed("player_jump")) and player.velocity.y < 0:
+	if not(Input.is_action_pressed(player.inputJump)) and player.velocity.y < 0:
 		player.velocity.y *= (0.85*60) * delta
 		
 	if player.is_on_floor():

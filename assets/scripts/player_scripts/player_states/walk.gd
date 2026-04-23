@@ -25,7 +25,7 @@ func stateProcess(delta:float) -> void:
 	else:
 		player.sprite.scale.x = player.controlDirection.x
 		
-	if Input.is_action_just_pressed("player_jump"):
+	if Input.is_action_just_pressed(player.inputJump):
 		stateManager.switchState("jump", "jumping")
 		return
 		
@@ -45,7 +45,7 @@ func stateProcess(delta:float) -> void:
 	slopeMultiplier = clampf(slopeMultiplier, 0.4, 1.6)
 	
 	
-	if (!Input.is_action_pressed("player_run")):
+	if (!Input.is_action_pressed(player.inputSprint)):
 		targetSpeed = player.controlDirection.x * (player.walkSpeed/2)
 		player.lastSpeed = (player.walkSpeed/1.5)
 		currentAcceleration = walkAcceleration

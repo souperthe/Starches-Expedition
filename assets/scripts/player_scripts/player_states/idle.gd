@@ -21,7 +21,7 @@ func stateProcess(delta:float) -> void:
 		stateManager.switchState("walk")
 		return
 		
-	if Input.is_action_just_pressed("player_jump"):
+	if Input.is_action_just_pressed(player.inputJump):
 		stateManager.switchState("jump", "jumping")
 		return
 		
