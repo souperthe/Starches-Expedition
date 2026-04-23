@@ -49,6 +49,7 @@ func stateProcess(delta:float) -> void:
 	
 	if player.coyoteTime > 0 and Input.is_action_just_pressed("player_jump"):
 		stateManager.switchState("jump", "jumping")
+		player.coyoteTime = -500
 		return
 		
 	if player.controlDirection.x != 0:

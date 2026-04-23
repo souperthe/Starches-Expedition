@@ -11,6 +11,7 @@
 [ext_resource type="Script" uid="uid://b24dm5mtwrqfr" path="res://assets/scripts/player_scripts/player_states/dive.gd" id="8_lvyht"]
 [ext_resource type="Script" uid="uid://dumwriu8paex8" path="res://assets/scripts/player_scripts/player_states/actor.gd" id="9_fg3d2"]
 [ext_resource type="AudioStream" uid="uid://biahhbhctqb4g" path="res://assets/sound/sfx/step.wav" id="9_lvyht"]
+[ext_resource type="Script" uid="uid://ciab5hb0weum2" path="res://assets/scripts/player_scripts/player_states/double_jump.gd" id="10_qgtm8"]
 [ext_resource type="AudioStream" uid="uid://0ju4keni4e44" path="res://assets/sound/sfx/jump.wav" id="11_htwuo"]
 [ext_resource type="AudioStream" uid="uid://7dllalbdjbiw" path="res://assets/sound/sfx/skid.wav" id="12_34ecl"]
 [ext_resource type="PackedScene" uid="uid://fa1rim0f2o5h" path="res://assets/objects/player_hud.tscn" id="14_1qp14"]
@@ -76,6 +77,9 @@ script = ExtResource("8_lvyht")
 [node name="Actor" type="Node" parent="StateManager" unique_id=1561611392]
 script = ExtResource("9_fg3d2")
 
+[node name="DoubleJump" type="Node" parent="StateManager" unique_id=299894049]
+script = ExtResource("10_qgtm8")
+
 [node name="SpritePivot" type="Node2D" parent="." unique_id=1446801159]
 scale = Vector2(0.15, 0.15)
 
@@ -83,8 +87,8 @@ scale = Vector2(0.15, 0.15)
 texture_filter = 2
 position = Vector2(0, -200.4)
 sprite_frames = ExtResource("1_ikdab")
-animation = &"land"
-frame = 3
+animation = &"doublejump"
+frame = 5
 frame_progress = 1.0
 speed_scale = 0.25
 
