@@ -21,7 +21,9 @@
 [ext_resource type="Texture2D" uid="uid://dm52voimwlehf" path="res://assets/images/characters/starch/starch_doublejump.swf/frames/6.png" id="10_qvdl7"]
 [ext_resource type="Texture2D" uid="uid://doj4hoa261g5u" path="res://assets/images/characters/starch/starch_idle.swf/frames/10.svg" id="10_xrayv"]
 [ext_resource type="Texture2D" uid="uid://cinxqc00tnsjl" path="res://assets/images/characters/starch/starch_idle.swf/frames/11.svg" id="11_5mnw2"]
+[ext_resource type="Texture2D" uid="uid://bux5kbcdwp5c1" path="res://assets/images/characters/starch/starch_grabbed.swf/frames/1.svg" id="11_xgqhg"]
 [ext_resource type="Texture2D" uid="uid://bsi877yoy4icg" path="res://assets/images/characters/starch/starch_idle.swf/frames/12.svg" id="12_kq1c6"]
+[ext_resource type="Texture2D" uid="uid://gh72rv30mut8" path="res://assets/images/characters/starch/starch_grabbed.swf/frames/2.svg" id="12_op8vo"]
 [ext_resource type="Texture2D" uid="uid://cje67asuchps8" path="res://assets/images/characters/starch/starch_idle.swf/frames/13.svg" id="13_fc4fk"]
 [ext_resource type="Texture2D" uid="uid://dpro1d3esacd3" path="res://assets/images/characters/starch/starch_move.swf/frames/1.svg" id="14_6x3xa"]
 [ext_resource type="Texture2D" uid="uid://f804fgaxk20t" path="res://assets/images/characters/starch/starch_jump.swf/frames/1.svg" id="14_7bv8t"]
@@ -107,6 +109,17 @@ animations = [{
 }],
 "loop": false,
 "name": &"doublejump",
+"speed": 60.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("11_xgqhg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_op8vo")
+}],
+"loop": true,
+"name": &"grabbed",
 "speed": 60.0
 }, {
 "frames": [{

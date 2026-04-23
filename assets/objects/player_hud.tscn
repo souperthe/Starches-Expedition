@@ -12,7 +12,11 @@
 [ext_resource type="Texture2D" uid="uid://cjdr20ylm27l0" path="res://assets/images/hud/general/hud_coin.swf/frames/1.svg" id="8_0qdgq"]
 [ext_resource type="Texture2D" uid="uid://bj8uppj3v5o0k" path="res://assets/images/hud/general/hud_coin.swf/frames/2.svg" id="9_3adly"]
 [ext_resource type="Script" uid="uid://c1qeuehf38ha7" path="res://assets/scripts/player_scripts/hud/coin_visuals.gd" id="11_6xpvq"]
+[ext_resource type="Script" uid="uid://kiheyc2hy2wu" path="res://assets/scripts/player_scripts/hud/coin_icon.gd" id="11_il7t8"]
 [ext_resource type="AudioStream" uid="uid://bnu2y4e77isto" path="res://assets/sound/sfx/freesound_community-coin-flip-37787.wav" id="13_x32s3"]
+[ext_resource type="Texture2D" uid="uid://bq5vgll3lhrgf" path="res://assets/images/hud/general/hud_time.swf/frames/1.svg" id="14_720vk"]
+[ext_resource type="Texture2D" uid="uid://blbuy1h35t81w" path="res://assets/images/hud/general/hud_time.swf/frames/2.svg" id="15_il7t8"]
+[ext_resource type="Script" uid="uid://d3sbeodgr2ax7" path="res://assets/scripts/player_scripts/hud/time_icon.gd" id="15_tb0ny"]
 
 [sub_resource type="Animation" id="Animation_2nd5j"]
 length = 0.001
@@ -226,6 +230,12 @@ random_pitch = 1.0656005
 streams_count = 1
 stream_0/stream = ExtResource("13_x32s3")
 
+[sub_resource type="AnimatedTexture" id="AnimatedTexture_tb0ny"]
+frames = 2
+frame_0/texture = ExtResource("14_720vk")
+frame_1/texture = ExtResource("15_il7t8")
+frame_1/duration = 1.0
+
 [node name="PlayerHUD" type="CanvasLayer" unique_id=2104762548]
 script = ExtResource("1_yt60p")
 
@@ -241,6 +251,7 @@ script = ExtResource("2_8shm4")
 animator = NodePath("AnimationPlayer")
 
 [node name="ColorRect" type="ColorRect" parent="Intro" unique_id=1655245386]
+visible = false
 modulate = Color(1, 1, 1, 0)
 layout_mode = 1
 anchors_preset = 8
@@ -310,7 +321,7 @@ texture = ExtResource("4_o8weo")
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Intro" unique_id=1666851795]
 libraries/ = SubResource("AnimationLibrary_0qdgq")
 
-[node name="RegularHud" type="Control" parent="." unique_id=1529701522 node_paths=PackedStringArray("coinLabel", "coinIcon", "coinCollect")]
+[node name="RegularHud" type="Control" parent="." unique_id=1529701522]
 modulate = Color(1, 1, 1, 0)
 layout_mode = 3
 anchors_preset = 15
@@ -319,9 +330,6 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("6_3607w")
-coinLabel = NodePath("CoinIcon/Label")
-coinIcon = NodePath("CoinIcon/TextureRect")
-coinCollect = NodePath("CoinIcon/CoinCollect")
 
 [node name="HealthIcon" type="Control" parent="RegularHud" unique_id=2003791765]
 anchors_preset = 0
@@ -360,13 +368,17 @@ grow_vertical = 2
 script = ExtResource("11_6xpvq")
 goto = NodePath("../CoinIcon/GlideGoto")
 
-[node name="CoinIcon" type="Control" parent="RegularHud" unique_id=1020473791]
+[node name="CoinIcon" type="Control" parent="RegularHud" unique_id=1020473791 node_paths=PackedStringArray("coinLabel", "coinIcon", "coinCollect")]
 anchors_preset = 0
 offset_left = 5.0
 offset_top = 48.000015
 offset_right = 249.0
 offset_bottom = 124.0
 scale = Vector2(0.8, 0.8)
+script = ExtResource("11_il7t8")
+coinLabel = NodePath("Label")
+coinIcon = NodePath("TextureRect")
+coinCollect = NodePath("CoinCollect")
 
 [node name="Label" type="Label" parent="RegularHud/CoinIcon" unique_id=428668393]
 layout_mode = 1
@@ -402,3 +414,33 @@ offset_bottom = 77.5
 stream = SubResource("AudioStreamRandomizer_omcjk")
 volume_db = -15.047
 pitch_scale = 1.5
+
+[node name="TimeIcon" type="Control" parent="RegularHud" unique_id=279966591 node_paths=PackedStringArray("timerLabel")]
+anchors_preset = 0
+offset_left = 5.0
+offset_top = 95.999985
+offset_right = 249.0
+offset_bottom = 172.0
+scale = Vector2(0.8, 0.8)
+script = ExtResource("15_tb0ny")
+timerLabel = NodePath("Label")
+
+[node name="Label" type="Label" parent="RegularHud/TimeIcon" unique_id=272039282]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 65.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "500"
+label_settings = ExtResource("6_3adly")
+vertical_alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="RegularHud/TimeIcon" unique_id=143280217]
+layout_mode = 1
+offset_left = -8.0
+offset_right = 492.0
+offset_bottom = 500.0
+scale = Vector2(0.15, 0.15)
+texture = SubResource("AnimatedTexture_tb0ny")

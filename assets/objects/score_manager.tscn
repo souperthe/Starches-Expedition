@@ -8,11 +8,16 @@ random_pitch = 1.0656005
 streams_count = 1
 stream_0/stream = ExtResource("2_nevhi")
 
-[node name="ScoreManager" type="Node" unique_id=1031334951 node_paths=PackedStringArray("coinCollected")]
+[node name="ScoreManager" type="Node" unique_id=1031334951 node_paths=PackedStringArray("coinCollected", "levelTimer")]
 script = ExtResource("1_bb86n")
 coinCollected = NodePath("CoinCollected")
+levelTimer = NodePath("LevelTimer")
 
 [node name="CoinCollected" type="AudioStreamPlayer" parent="." unique_id=2046712969]
 stream = SubResource("AudioStreamRandomizer_xmw7g")
 volume_db = -23.327
 pitch_scale = 1.5
+
+[node name="LevelTimer" type="Timer" parent="." unique_id=1739198395]
+wait_time = 70.0
+one_shot = true

@@ -1,3 +1,3 @@
 class_name ClassEntranceManager extends Node
 
-var currentEntrance:String = "START"
+var currentEntrance:String = "A"

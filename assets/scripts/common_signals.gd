@@ -5,3 +5,4 @@ class_name ClassCommonSignals extends Node
 signal playIntro
 signal createCoinVisual(coinType:String, animatedSprite:AnimatedSprite2D, currentScore:int)
 signal updateCoins(currentScore:int)
+signal sentToEntrance(entrance:String)

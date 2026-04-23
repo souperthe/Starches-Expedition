@@ -5,6 +5,8 @@ var minimumSpeed:float = 4.453125
 
 func stateEnter(_enterMessage:String) -> void:
 	
+	player.coyoteTime = player.coyoteTimeMax
+	
 	if _enterMessage == "landing":
 		player.soundManager.playSound("step")
 		animator.animationPlay("land", 0.4)
@@ -14,8 +16,6 @@ func stateExit(_exitMessage:String) -> void:
 	return
 	
 func stateProcess(delta:float) -> void:
-	
-	player.coyoteTime = player.coyoteTimeMax
 	
 	if player.controlDirection.x != 0:
 		stateManager.switchState("walk")

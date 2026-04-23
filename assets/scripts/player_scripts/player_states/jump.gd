@@ -35,6 +35,7 @@ func stateEnter(_enterMessage:String) -> void:
 	jumpIndex = clampi(jumpIndex, 0, 2)
 	
 	player.velocity.y = jumpPower[jumpIndex] * 2
+	player.coyoteTime = -500
 	return
 	
 func stateExit(_exitMessage:String) -> void:

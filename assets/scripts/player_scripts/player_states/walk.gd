@@ -10,6 +10,7 @@ var skidPlaying:bool = false
 func stateEnter(_enterMessage:String) -> void:
 	animator.animationPlay("move", 0.25)
 	skidPlaying = false
+	player.coyoteTime = player.coyoteTimeMax
 	return
 	
 func stateExit(_exitMessage:String) -> void:
@@ -17,8 +18,6 @@ func stateExit(_exitMessage:String) -> void:
 	return
 	
 func stateProcess(delta:float) -> void:
-	
-	player.coyoteTime = player.coyoteTimeMax
 	
 	if player.controlDirection.x == 0:
 		stateManager.switchState("idle")

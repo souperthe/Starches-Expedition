@@ -2,22 +2,35 @@
 
 [ext_resource type="Script" uid="uid://ci3aaw2g606qo" path="res://assets/scripts/player.gd" id="1_5pvfp"]
 [ext_resource type="SpriteFrames" uid="uid://ca67ep75bjo76" path="res://assets/resources/sprite_frames/frames_starch.tres" id="1_ikdab"]
+[ext_resource type="Script" uid="uid://j4fieo13sa5s" path="res://assets/scripts/player_scripts/fallzone_manager.gd" id="2_7muya"]
 [ext_resource type="Script" uid="uid://ds64ad31eo4sj" path="res://assets/scripts/player_scripts/sound_manager.gd" id="2_bkysh"]
 [ext_resource type="Script" uid="uid://c0agmxl68sxc7" path="res://assets/scripts/player_scripts/animation_manager.gd" id="3_6r1sy"]
 [ext_resource type="Script" uid="uid://mb6q2b7sniup" path="res://assets/scripts/player_scripts/state_manager.gd" id="3_jg13i"]
+[ext_resource type="AudioStream" uid="uid://ds1eptf2o1b12" path="res://assets/sound/sfx/sfx_fallzonelaugh1.wav" id="3_usqfr"]
+[ext_resource type="AudioStream" uid="uid://cfj14w52t5df7" path="res://assets/sound/sfx/sfx_fallzonelaugh2.wav" id="4_vhanp"]
+[ext_resource type="AudioStream" uid="uid://cj1bsinffi6la" path="res://assets/sound/sfx/sfx_fallzonelaugh3.wav" id="5_foeld"]
 [ext_resource type="Script" uid="uid://eydo18aqrbyc" path="res://assets/scripts/player_scripts/player_states/idle.gd" id="5_nqkij"]
 [ext_resource type="Script" uid="uid://beee4srejmrka" path="res://assets/scripts/player_scripts/player_states/walk.gd" id="6_nqkij"]
 [ext_resource type="Script" uid="uid://hwkei6oawn0" path="res://assets/scripts/player_scripts/player_states/jump.gd" id="6_xvjlw"]
 [ext_resource type="Script" uid="uid://b24dm5mtwrqfr" path="res://assets/scripts/player_scripts/player_states/dive.gd" id="8_lvyht"]
 [ext_resource type="Script" uid="uid://dumwriu8paex8" path="res://assets/scripts/player_scripts/player_states/actor.gd" id="9_fg3d2"]
 [ext_resource type="AudioStream" uid="uid://biahhbhctqb4g" path="res://assets/sound/sfx/step.wav" id="9_lvyht"]
-[ext_resource type="Script" uid="uid://ciab5hb0weum2" path="res://assets/scripts/player_scripts/player_states/double_jump.gd" id="10_qgtm8"]
+[ext_resource type="Script" path="res://assets/scripts/player_scripts/player_states/double_jump.gd" id="10_qgtm8"]
 [ext_resource type="AudioStream" uid="uid://0ju4keni4e44" path="res://assets/sound/sfx/jump.wav" id="11_htwuo"]
 [ext_resource type="AudioStream" uid="uid://7dllalbdjbiw" path="res://assets/sound/sfx/skid.wav" id="12_34ecl"]
 [ext_resource type="PackedScene" uid="uid://fa1rim0f2o5h" path="res://assets/objects/player_hud.tscn" id="14_1qp14"]
+[ext_resource type="Script" uid="uid://c5p05iu0t2taf" path="res://assets/scripts/player_scripts/player_states/return_to_ground.gd" id="15_vhanp"]
+[ext_resource type="AudioStream" uid="uid://b2epd3yy0mv1j" path="res://assets/sound/sfx/sfx_fallzoneland.wav" id="16_y0ns2"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5pvfp"]
 size = Vector2(15, 32)
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_7lv6i"]
+random_pitch = 1.0656005
+streams_count = 3
+stream_0/stream = ExtResource("3_usqfr")
+stream_1/stream = ExtResource("4_vhanp")
+stream_2/stream = ExtResource("5_foeld")
 
 [sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_htwuo"]
 random_pitch = 1.0656005
@@ -34,12 +47,18 @@ random_pitch = 1.0656005
 streams_count = 1
 stream_0/stream = ExtResource("12_34ecl")
 
-[node name="Player" type="CharacterBody2D" unique_id=1979464615 node_paths=PackedStringArray("animationManager", "stateManager", "soundManager", "sprite")]
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_rjy6x"]
+random_pitch = 1.0779822
+streams_count = 1
+stream_0/stream = ExtResource("16_y0ns2")
+
+[node name="Player" type="CharacterBody2D" unique_id=1979464615 node_paths=PackedStringArray("animationManager", "fallzoneManager", "stateManager", "soundManager", "sprite")]
 z_index = 2
 floor_constant_speed = true
 floor_snap_length = 32.0
 script = ExtResource("1_5pvfp")
 animationManager = NodePath("AnimationManager")
+fallzoneManager = NodePath("FallzoneManager")
 stateManager = NodePath("StateManager")
 soundManager = NodePath("SoundManager")
 sprite = NodePath("SpritePivot/Animator")
@@ -47,6 +66,16 @@ sprite = NodePath("SpritePivot/Animator")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=283525169]
 position = Vector2(-0.5, -16)
 shape = SubResource("RectangleShape2D_5pvfp")
+
+[node name="FallzoneManager" type="Node" parent="." unique_id=1815791049 node_paths=PackedStringArray("parentPlayer", "fallzoneLaugh")]
+script = ExtResource("2_7muya")
+parentPlayer = NodePath("..")
+fallzoneLaugh = NodePath("FallzoneLaugh")
+
+[node name="FallzoneLaugh" type="AudioStreamPlayer" parent="FallzoneManager" unique_id=190420267]
+stream = SubResource("AudioStreamRandomizer_7lv6i")
+volume_db = -5.0
+pitch_scale = 1.2
 
 [node name="SoundManager" type="Node" parent="." unique_id=461190683 node_paths=PackedStringArray("soundHolder")]
 script = ExtResource("2_bkysh")
@@ -60,7 +89,7 @@ soundManager = NodePath("../SoundManager")
 [node name="StateManager" type="Node" parent="." unique_id=1586120249 node_paths=PackedStringArray("_parentPlayer", "_initalState")]
 script = ExtResource("3_jg13i")
 _parentPlayer = NodePath("..")
-_initalState = NodePath("Idle")
+_initalState = NodePath("Actor")
 
 [node name="Idle" type="Node" parent="StateManager" unique_id=345682952]
 script = ExtResource("5_nqkij")
@@ -80,6 +109,9 @@ script = ExtResource("9_fg3d2")
 [node name="DoubleJump" type="Node" parent="StateManager" unique_id=299894049]
 script = ExtResource("10_qgtm8")
 
+[node name="ReturnToGround" type="Node" parent="StateManager" unique_id=351027841]
+script = ExtResource("15_vhanp")
+
 [node name="SpritePivot" type="Node2D" parent="." unique_id=1446801159]
 scale = Vector2(0.15, 0.15)
 
@@ -87,9 +119,8 @@ scale = Vector2(0.15, 0.15)
 texture_filter = 2
 position = Vector2(0, -200.4)
 sprite_frames = ExtResource("1_ikdab")
-animation = &"doublejump"
-frame = 5
-frame_progress = 1.0
+animation = &"grabbed"
+frame_progress = 0.08541274
 speed_scale = 0.25
 
 [node name="Sounds" type="Node2D" parent="." unique_id=1232175334]
@@ -107,5 +138,9 @@ pitch_scale = 1.2
 stream = SubResource("AudioStreamRandomizer_fg3d2")
 volume_db = -18.607
 pitch_scale = 1.2
+
+[node name="fallzone" type="AudioStreamPlayer2D" parent="Sounds" unique_id=1411102466]
+stream = SubResource("AudioStreamRandomizer_rjy6x")
+pitch_scale = 0.8
 
 [node name="PlayerHUD" parent="." unique_id=2104762548 instance=ExtResource("14_1qp14")]

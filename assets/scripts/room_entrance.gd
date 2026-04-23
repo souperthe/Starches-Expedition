@@ -48,5 +48,6 @@ func _ready() -> void:
 		return
 		
 	CurrentPlayer.position = position 
+	CommonSignals.sentToEntrance.emit(desiredEntrance)
 	
 	return

@@ -1,0 +1,49 @@
+[gd_scene format=3 uid="uid://dhsgxv7iisb2o"]
+
+[ext_resource type="Script" uid="uid://dmopenadng0wc" path="res://assets/scripts/title.gd" id="1_fljja"]
+[ext_resource type="Script" uid="uid://bj0w7eye8pxc6" path="res://assets/scripts/room_entrance.gd" id="2_np7yl"]
+[ext_resource type="Script" uid="uid://ys4ijy3uag5c" path="res://assets/scripts/camera_limiter.gd" id="3_tpua6"]
+
+[node name="title" type="Node2D" unique_id=566974950]
+script = ExtResource("1_fljja")
+
+[node name="RoomEntrance" type="Node2D" parent="." unique_id=2097932519]
+position = Vector2(-200, 128)
+script = ExtResource("2_np7yl")
+targetEntrance = "A"
+metadata/_custom_type_script = "uid://bj0w7eye8pxc6"
+
+[node name="CameraLimiter" type="Container" parent="." unique_id=1159335392]
+z_index = 20
+offset_right = 960.0
+offset_bottom = 544.0
+script = ExtResource("3_tpua6")
+metadata/_custom_type_script = "uid://ys4ijy3uag5c"
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=985856356]
+
+[node name="Control" type="Control" parent="CanvasLayer" unique_id=108110981]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="CanvasLayer/Control" unique_id=1777541793]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -99.0
+offset_top = -50.5
+offset_right = 99.0
+offset_bottom = 50.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "current coins:
+current time:
+
+press any button to begin"

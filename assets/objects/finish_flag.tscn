@@ -1,0 +1,90 @@
+[gd_scene format=3 uid="uid://2lvlihxg6wel"]
+
+[ext_resource type="Script" uid="uid://b6q8ot3qigo2a" path="res://assets/scripts/finish_flag.gd" id="1_d6k1q"]
+[ext_resource type="Texture2D" uid="uid://cmiubx5osvmrt" path="res://assets/images/collectables/flag/secretflag_0011.png" id="1_ovekr"]
+[ext_resource type="Texture2D" uid="uid://c6ux6sgxwen86" path="res://assets/images/collectables/flag/secretflag_0012.png" id="2_d6k1q"]
+[ext_resource type="Texture2D" uid="uid://f35h07wlesju" path="res://assets/images/collectables/flag/secretflag_0013.png" id="3_8sq8v"]
+[ext_resource type="Texture2D" uid="uid://dmrlfnmrgbafe" path="res://assets/images/collectables/flag/secretflag_0014.png" id="4_iyaxj"]
+[ext_resource type="Texture2D" uid="uid://2x2y1rjxk0rt" path="res://assets/images/collectables/flag/secretflag_0015.png" id="5_4w7vu"]
+[ext_resource type="Texture2D" uid="uid://dnriya2a4kx2k" path="res://assets/images/collectables/flag/secretflag_0016.png" id="6_71k44"]
+[ext_resource type="Texture2D" uid="uid://wpuv7v4onowl" path="res://assets/images/collectables/flag/secretflag_0017.png" id="7_0xv7d"]
+[ext_resource type="Texture2D" uid="uid://bkdakbixhwtqv" path="res://assets/images/collectables/flag/secretflag_0018.png" id="8_ayxtn"]
+[ext_resource type="Texture2D" uid="uid://chqnpswjj173c" path="res://assets/images/collectables/flag/secretflag_0019.png" id="9_uslr2"]
+[ext_resource type="Texture2D" uid="uid://c36f8hy3m3c1d" path="res://assets/images/collectables/flag/secretflag_0020.png" id="10_gndah"]
+[ext_resource type="Texture2D" uid="uid://dclgyvqqojb4c" path="res://assets/images/collectables/flag/secretflag_0021.png" id="11_tgqff"]
+[ext_resource type="Texture2D" uid="uid://ce4xopeu4v7b8" path="res://assets/images/collectables/flag/secretflag_0001.png" id="12_65b2w"]
+[ext_resource type="Texture2D" uid="uid://ba2so0tj50d52" path="res://assets/images/collectables/flag/secretflag_0002.png" id="13_8gj3f"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_fcddx"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_ovekr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_d6k1q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_8sq8v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_iyaxj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_4w7vu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_71k44")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_0xv7d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_ayxtn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_uslr2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_gndah")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_tgqff")
+}],
+"loop": false,
+"name": &"finished",
+"speed": 60.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("12_65b2w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_8gj3f")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_d6k1q"]
+size = Vector2(20, 66)
+
+[node name="FinishFlag" type="Node2D" unique_id=593120254 node_paths=PackedStringArray("flagArea")]
+script = ExtResource("1_d6k1q")
+flagArea = NodePath("Area2D")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=227871216]
+position = Vector2(6, -32)
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_fcddx")
+animation = &"finished"
+frame = 10
+frame_progress = 1.0
+speed_scale = 0.25
+
+[node name="Area2D" type="Area2D" parent="." unique_id=597081053]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1239702033]
+position = Vector2(0, -31)
+shape = SubResource("RectangleShape2D_d6k1q")
