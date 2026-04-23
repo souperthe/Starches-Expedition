@@ -8,7 +8,7 @@
 script = ExtResource("1_fljja")
 
 [node name="RoomEntrance" type="Node2D" parent="." unique_id=2097932519]
-position = Vector2(-200, 128)
+position = Vector2(-32, -56)
 script = ExtResource("2_np7yl")
 targetEntrance = "A"
 metadata/_custom_type_script = "uid://bj0w7eye8pxc6"

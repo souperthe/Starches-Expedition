@@ -19,5 +19,5 @@ volume_db = -23.327
 pitch_scale = 1.5
 
 [node name="LevelTimer" type="Timer" parent="." unique_id=1739198395]
-wait_time = 70.0
+wait_time = 80.0
 one_shot = true

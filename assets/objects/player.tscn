@@ -120,8 +120,8 @@ texture_filter = 2
 position = Vector2(0, -200.4)
 sprite_frames = ExtResource("1_ikdab")
 animation = &"grabbed"
-frame_progress = 0.08541274
-speed_scale = 0.25
+frame_progress = 0.45529878
+speed_scale = 0.2
 
 [node name="Sounds" type="Node2D" parent="." unique_id=1232175334]
 

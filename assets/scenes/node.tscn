@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://c4lhoo8iabyeb" path="res://assets/objects/coin.tscn" id="6_4yusq"]
 [ext_resource type="Script" uid="uid://ys4ijy3uag5c" path="res://assets/scripts/camera_limiter.gd" id="7_vh25t"]
 [ext_resource type="PackedScene" uid="uid://2lvlihxg6wel" path="res://assets/objects/finish_flag.tscn" id="8_hdxyo"]
+[ext_resource type="Texture2D" uid="uid://fdkt2ssyev2e" path="res://assets/images/control _guide.png" id="9_nrq8k"]
 
 [node name="Node" type="Node2D" unique_id=553185642]
 
@@ -697,3 +698,9 @@ scale = Vector2(5, 12)
 [node name="FinishFlag" parent="." unique_id=593120254 node_paths=PackedStringArray("levelMusic") instance=ExtResource("8_hdxyo")]
 position = Vector2(11472, -8)
 levelMusic = NodePath("../AudioStreamPlayer")
+
+[node name="ControlGuide" type="Sprite2D" parent="." unique_id=929377802]
+z_index = -2
+position = Vector2(232, 112)
+scale = Vector2(0.15, 0.15)
+texture = ExtResource("9_nrq8k")

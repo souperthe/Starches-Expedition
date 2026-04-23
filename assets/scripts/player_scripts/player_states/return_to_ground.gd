@@ -5,7 +5,7 @@ var goal:Vector2
 func stateEnter(_enterMessage:String) -> void:
 	goal = player.lastGroundedPosition - Vector2(0, 32)
 	player.runPhysics = false
-	animator.animationPlay("grabbed", 0.5)
+	animator.animationPlay("grabbed", 0.2)
 	return
 	
 func stateExit(_exitMessage:String) -> void:

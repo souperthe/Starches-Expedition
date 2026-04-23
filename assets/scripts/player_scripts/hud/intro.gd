@@ -6,6 +6,7 @@ func _introFinished() -> void:
 	CurrentPlayer.stateManager.switchState("idle")
 	ScoreManager.levelTimer.start()
 	ScoreManager.levelBegan = Time.get_unix_time_from_system()
+	CurrentPlayer.runPhysics = true
 	return
 	
 func _introPlay() -> void:

@@ -6,6 +6,7 @@ class_name ClassScoreManager extends Node
 var currentScore:int = 0
 var levelBegan:float
 var levelEnded:float
+var levelTimeRemaining:float
 
 
 func _levelTimeout() -> void:
