@@ -5,11 +5,13 @@ var walkSpeed:float = 93.75*4
 var jumpPower:Array[float] = [-240.0, -240.0, -300.0]
 var speedThreshold:float = 0
 var jumpLetGo:bool = false
+var canDive:bool = false
 
 func stateEnter(_enterMessage:String) -> void:
 	
 	jumpLetGo = true
 	animator.animationPlay("jump", 9000)
+	canDive = _enterMessage != "fromdive"
 	
 	if _enterMessage != "jumping":
 		return
@@ -58,7 +60,7 @@ func stateProcess(delta:float) -> void:
 		
 	player.velocity.x = move_toward(player.velocity.x, targetSpeed, walkAcceleration * delta)
 		
-	if Input.is_action_just_pressed(player.inputAttack):
+	if Input.is_action_just_pressed(player.inputAttack) and canDive:
 		stateManager.switchState("dive")
 		return
 

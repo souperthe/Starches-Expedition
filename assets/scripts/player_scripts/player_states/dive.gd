@@ -19,6 +19,12 @@ func stateProcess(delta:float) -> void:
 	
 	player.velocity.y += player.gravityScale * delta
 	
+	if player.controlDirection.x == -player.sprite.scale.x:
+		player.controlDirection.x = -player.sprite.scale.x
+		player.velocity.x = player.sprite.scale.x * 50
+		stateManager.switchState("jump", "fromdive")
+		return
+	
 	if player.is_on_floor():
 		stateManager.switchState("idle", "landing")
 		return
