@@ -4,7 +4,7 @@ extends Node2D
 func _ready() -> void:
 	
 	var currentTime:float = ScoreManager.levelEnded - ScoreManager.levelBegan
-	$CanvasLayer/Control/Label.text = "last coins: " + str(ScoreManager.currentScore) + "\nlast time: " + str(currentTime)   + "\nlast time remaing: " + str(ScoreManager.levelTimeRemaining) + "\n\npress any key to begin"
+	$CanvasLayer/Control/Label.text = "last coins: " + str(ScoreManager.currentScore) + "\nlast time: " + str(currentTime)   + "\nlast time remaing: " + str(ScoreManager.levelTimeRemaining) + "\nlast total score: " + str(ScoreManager.levelTimeRemaining * ScoreManager.currentScore) + "\n\npress any key to begin"
 	
 	CurrentPlayer.hide()
 	CurrentPlayer.visible = false

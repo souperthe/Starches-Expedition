@@ -21,6 +21,8 @@ var lastAirbornePosition:Vector2
 @export var soundManager:SoundManager
 @export var hudLayer:CanvasLayer
 @export var sprite:AnimatedSprite2D
+@export var floorCastLeft:RayCast2D
+@export var floorCastRight:RayCast2D
 
 
 var inputJump:String = "player_jump"
@@ -37,17 +39,41 @@ func reset() -> void:
 	fallzoneManager.fallen = false
 	hudLayer.show()
 	$PlayerHUD/Intro/AnimationPlayer.play("RESET")
+	_setControllerIndex()
 	return
+	
+func _setControllerIndex() -> void:
+	
+	if playerIndex == 0:
+		return
+		
+	var stringIndex:String = str(playerIndex)
+	
+	inputJump = stringIndex + inputJump
+	inputAttack = stringIndex + inputAttack
+	inputSprint = stringIndex + inputSprint
+	
+	inputUp = stringIndex + inputUp
+	inputDown = stringIndex + inputDown
+	inputRight = stringIndex + inputRight
+	inputLeft = stringIndex + inputLeft
+	
+	return
+
 
 func _process(_delta: float) -> void:
 	wishDirection = Input.get_vector(inputLeft, inputRight, inputDown, inputUp)
 	controlDirection.x = floorf(Input.get_axis(inputLeft, inputRight))
 	controlDirection.y = floorf(Input.get_axis(inputDown, inputUp))
 	
-	if is_on_floor():
-		lastGroundedPosition = position
-	else:
+	if !is_on_floor():
 		lastAirbornePosition = position
+		return
+	
+	if floorCastLeft.is_colliding():
+		lastGroundedPosition = floorCastLeft.get_collision_point()
+	elif floorCastRight.is_colliding():
+		lastGroundedPosition = floorCastRight.get_collision_point()
 		
 	return
 

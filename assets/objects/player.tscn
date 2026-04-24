@@ -15,7 +15,7 @@
 [ext_resource type="Script" uid="uid://b24dm5mtwrqfr" path="res://assets/scripts/player_scripts/player_states/dive.gd" id="8_lvyht"]
 [ext_resource type="Script" uid="uid://dumwriu8paex8" path="res://assets/scripts/player_scripts/player_states/actor.gd" id="9_fg3d2"]
 [ext_resource type="AudioStream" uid="uid://biahhbhctqb4g" path="res://assets/sound/sfx/step.wav" id="9_lvyht"]
-[ext_resource type="Script" uid="uid://ciab5hb0weum2" path="res://assets/scripts/player_scripts/player_states/double_jump.gd" id="10_qgtm8"]
+[ext_resource type="Script" path="res://assets/scripts/player_scripts/player_states/double_jump.gd" id="10_qgtm8"]
 [ext_resource type="AudioStream" uid="uid://0ju4keni4e44" path="res://assets/sound/sfx/jump.wav" id="11_htwuo"]
 [ext_resource type="AudioStream" uid="uid://7dllalbdjbiw" path="res://assets/sound/sfx/skid.wav" id="12_34ecl"]
 [ext_resource type="PackedScene" uid="uid://fa1rim0f2o5h" path="res://assets/objects/player_hud.tscn" id="14_1qp14"]
@@ -52,7 +52,7 @@ random_pitch = 1.0779822
 streams_count = 1
 stream_0/stream = ExtResource("16_y0ns2")
 
-[node name="Player" type="CharacterBody2D" unique_id=1979464615 node_paths=PackedStringArray("animationManager", "fallzoneManager", "stateManager", "soundManager", "hudLayer", "sprite")]
+[node name="Player" type="CharacterBody2D" unique_id=1979464615 node_paths=PackedStringArray("animationManager", "fallzoneManager", "stateManager", "soundManager", "hudLayer", "sprite", "floorCastLeft", "floorCastRight")]
 z_index = 2
 floor_constant_speed = true
 floor_snap_length = 32.0
@@ -63,6 +63,8 @@ stateManager = NodePath("StateManager")
 soundManager = NodePath("SoundManager")
 hudLayer = NodePath("PlayerHUD")
 sprite = NodePath("SpritePivot/Animator")
+floorCastLeft = NodePath("LeftFloorCheck")
+floorCastRight = NodePath("RightFloorCheck")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=283525169]
 position = Vector2(-0.5, -16)
@@ -145,3 +147,11 @@ stream = SubResource("AudioStreamRandomizer_rjy6x")
 pitch_scale = 0.8
 
 [node name="PlayerHUD" parent="." unique_id=2104762548 instance=ExtResource("14_1qp14")]
+
+[node name="LeftFloorCheck" type="RayCast2D" parent="." unique_id=979143104]
+position = Vector2(-32, -9.06)
+target_position = Vector2(0, 15)
+
+[node name="RightFloorCheck" type="RayCast2D" parent="." unique_id=1125878240]
+position = Vector2(32, -9.06)
+target_position = Vector2(0, 15)
