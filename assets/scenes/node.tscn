@@ -741,7 +741,3 @@ position = Vector2(2256, 112)
 
 [node name="Coin119" parent="." unique_id=1567143958 instance=ExtResource("6_4yusq")]
 position = Vector2(2280, 112)
-
-[node name="CollisionPlatform8" parent="." unique_id=208247697 instance=ExtResource("4_idmui")]
-position = Vector2(10432, -168)
-scale = Vector2(32, 1)
