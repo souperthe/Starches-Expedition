@@ -19,6 +19,7 @@ var lastAirbornePosition:Vector2
 @export var fallzoneManager:FallzoneManager
 @export var stateManager:StateManager
 @export var soundManager:SoundManager
+@export var hudLayer:CanvasLayer
 @export var sprite:AnimatedSprite2D
 
 
@@ -29,6 +30,14 @@ var inputLeft:String = "player_left"
 var inputRight:String = "player_right"
 var inputUp:String = "player_up"
 var inputDown:String = "player_down"
+
+func reset() -> void:
+	ScoreManager.currentScore = 0
+	CommonSignals.updateCoins.emit(0)
+	fallzoneManager.fallen = false
+	hudLayer.show()
+	$PlayerHUD/Intro/AnimationPlayer.play("RESET")
+	return
 
 func _process(_delta: float) -> void:
 	wishDirection = Input.get_vector(inputLeft, inputRight, inputDown, inputUp)
