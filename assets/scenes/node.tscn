@@ -11,6 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://fdkt2ssyev2e" path="res://assets/images/control _guide.png" id="9_nrq8k"]
 
 [node name="Node" type="Node2D" unique_id=553185642]
+position = Vector2(1, 0)
 
 [node name="CameraLimiter" type="Container" parent="." unique_id=719257743]
 z_index = 20
@@ -741,3 +742,15 @@ position = Vector2(2256, 112)
 
 [node name="Coin119" parent="." unique_id=1567143958 instance=ExtResource("6_4yusq")]
 position = Vector2(2280, 112)
+
+[node name="Coin120" parent="." unique_id=1624867863 instance=ExtResource("6_4yusq")]
+position = Vector2(11463, -112)
+
+[node name="Coin121" parent="." unique_id=849441060 instance=ExtResource("6_4yusq")]
+position = Vector2(11487, -112)
+
+[node name="Coin122" parent="." unique_id=629198680 instance=ExtResource("6_4yusq")]
+position = Vector2(11463, -136)
+
+[node name="Coin123" parent="." unique_id=1724871046 instance=ExtResource("6_4yusq")]
+position = Vector2(11487, -136)
