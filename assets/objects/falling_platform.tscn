@@ -1,0 +1,40 @@
+[gd_scene format=3 uid="uid://deb8nmuq8sgcl"]
+
+[ext_resource type="PackedScene" uid="uid://c4fxx2lj5iacm" path="res://assets/objects/collision_platform.tscn" id="1_ouuwi"]
+[ext_resource type="Script" uid="uid://rahfqah0l5co" path="res://assets/scripts/falling_platform.gd" id="2_oudh3"]
+[ext_resource type="AudioStream" uid="uid://bfhniemgcf6yc" path="res://assets/sound/sfx/sake.wav" id="3_lrncs"]
+[ext_resource type="AudioStream" uid="uid://brwenyt5a6h35" path="res://assets/sound/sfx/fall.wav" id="4_n58xj"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bcxdc"]
+size = Vector2(16, 2)
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_3cyq5"]
+random_pitch = 1.0594631
+streams_count = 1
+stream_0/stream = ExtResource("3_lrncs")
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_l8oy5"]
+random_pitch = 1.0594631
+streams_count = 1
+stream_0/stream = ExtResource("4_n58xj")
+
+[node name="FallingPlatform" unique_id=817451786 node_paths=PackedStringArray("playerArea") instance=ExtResource("1_ouuwi")]
+script = ExtResource("2_oudh3")
+playerArea = NodePath("PlayerArea")
+
+[node name="PlayerArea" type="Area2D" parent="." index="2" unique_id=2146562540]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerArea" index="0" unique_id=376050412]
+position = Vector2(8, -1)
+shape = SubResource("RectangleShape2D_bcxdc")
+
+[node name="Shake" type="AudioStreamPlayer2D" parent="." index="3" unique_id=1946775114]
+position = Vector2(8, 4)
+stream = SubResource("AudioStreamRandomizer_3cyq5")
+volume_db = -10.0
+pitch_scale = 1.12
+
+[node name="Fall" type="AudioStreamPlayer2D" parent="." index="4" unique_id=82333644]
+position = Vector2(8, 4)
+stream = SubResource("AudioStreamRandomizer_l8oy5")
+volume_db = -20.0

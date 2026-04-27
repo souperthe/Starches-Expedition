@@ -10,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://brviov3k5r8gn" path="res://assets/images/characters/starch/starch_idle.swf/frames/5.svg" id="5_gld7f"]
 [ext_resource type="Texture2D" uid="uid://bwydkqahvtdk" path="res://assets/images/characters/starch/starch_dive.swf/frames/5.svg" id="5_hxidi"]
 [ext_resource type="Texture2D" uid="uid://ctv7c4uebbenp" path="res://assets/images/characters/starch/starch_doublejump.swf/frames/1.png" id="5_lnwui"]
+[ext_resource type="Texture2D" uid="uid://buys54x757hny" path="res://assets/images/characters/starch/starch_dive.swf/frames/6.svg" id="5_op8vo"]
 [ext_resource type="Texture2D" uid="uid://bkrpipxmosq3b" path="res://assets/images/characters/starch/starch_idle.swf/frames/6.svg" id="6_g2qnk"]
 [ext_resource type="Texture2D" uid="uid://bedtl0o2w6g1e" path="res://assets/images/characters/starch/starch_doublejump.swf/frames/2.png" id="6_l0jrw"]
 [ext_resource type="Texture2D" uid="uid://ccw480vxaehth" path="res://assets/images/characters/starch/starch_idle.swf/frames/7.svg" id="7_ka5is"]
@@ -66,8 +67,8 @@
 [ext_resource type="Texture2D" uid="uid://djbki1fw1e8bg" path="res://assets/images/characters/starch/starch_levelstart.swf/frames/4.png" id="40_renp1"]
 [ext_resource type="Texture2D" uid="uid://t7b2y1rb47mn" path="res://assets/images/characters/starch/starch_levelstart.swf/frames/5.png" id="41_13aqs"]
 [ext_resource type="Texture2D" uid="uid://dfbvvsjogw31u" path="res://assets/images/characters/starch/starch_levelstart.swf/frames/6.png" id="42_4yxwv"]
-[ext_resource type="Texture2D" uid="uid://if3chfp06rqq" path="res://assets/images/characters/starch/frames/1.svg" id="50_2f7xg"]
-[ext_resource type="Texture2D" uid="uid://qbrktuedy5wg" path="res://assets/images/characters/starch/frames/2.svg" id="51_84t4m"]
+[ext_resource type="Texture2D" uid="uid://1d4ibjkjucj8" path="res://assets/images/characters/starch/starch_skid.swf/frames/1.svg" id="67_xgqhg"]
+[ext_resource type="Texture2D" uid="uid://dipy7gbr6rfmn" path="res://assets/images/characters/starch/starch_skid.swf/frames/2.svg" id="68_op8vo"]
 
 [resource]
 animations = [{
@@ -83,6 +84,9 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": ExtResource("5_hxidi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_op8vo")
 }],
 "loop": false,
 "name": &"dive",
@@ -311,10 +315,10 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("50_2f7xg")
+"texture": ExtResource("67_xgqhg")
 }, {
 "duration": 1.0,
-"texture": ExtResource("51_84t4m")
+"texture": ExtResource("68_op8vo")
 }],
 "loop": true,
 "name": &"skid",
