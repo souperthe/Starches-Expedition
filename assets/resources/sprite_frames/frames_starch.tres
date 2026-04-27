@@ -9,7 +9,6 @@
 [ext_resource type="Texture2D" uid="uid://dm5wn42aclvrt" path="res://assets/images/characters/starch/starch_idle.swf/frames/4.svg" id="4_ro680"]
 [ext_resource type="Texture2D" uid="uid://brviov3k5r8gn" path="res://assets/images/characters/starch/starch_idle.swf/frames/5.svg" id="5_gld7f"]
 [ext_resource type="Texture2D" uid="uid://bwydkqahvtdk" path="res://assets/images/characters/starch/starch_dive.swf/frames/5.svg" id="5_hxidi"]
-[ext_resource type="Texture2D" uid="uid://ctv7c4uebbenp" path="res://assets/images/characters/starch/starch_doublejump.swf/frames/1.png" id="5_lnwui"]
 [ext_resource type="Texture2D" uid="uid://buys54x757hny" path="res://assets/images/characters/starch/starch_dive.swf/frames/6.svg" id="5_op8vo"]
 [ext_resource type="Texture2D" uid="uid://bkrpipxmosq3b" path="res://assets/images/characters/starch/starch_idle.swf/frames/6.svg" id="6_g2qnk"]
 [ext_resource type="Texture2D" uid="uid://bedtl0o2w6g1e" path="res://assets/images/characters/starch/starch_doublejump.swf/frames/2.png" id="6_l0jrw"]
@@ -93,9 +92,6 @@ animations = [{
 "speed": 60.0
 }, {
 "frames": [{
-"duration": 1.0,
-"texture": ExtResource("5_lnwui")
-}, {
 "duration": 1.0,
 "texture": ExtResource("6_l0jrw")
 }, {
