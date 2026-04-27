@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://5c5g4i70g1mt" path="res://assets/objects/collision_slope.tscn" id="3_cx38m"]
 [ext_resource type="PackedScene" uid="uid://c4fxx2lj5iacm" path="res://assets/objects/collision_platform.tscn" id="4_idmui"]
 [ext_resource type="Script" uid="uid://bj0w7eye8pxc6" path="res://assets/scripts/room_entrance.gd" id="5_4yusq"]
-[ext_resource type="AudioStream" uid="uid://ckx57dj0aaedy" path="res://assets/sound/music/efsdfdf.mp3" id="5_pyk6r"]
+[ext_resource type="AudioStream" uid="uid://b6yxkqo2jecrg" path="res://assets/sound/music/jazzyworld.wav" id="5_jil0d"]
 [ext_resource type="PackedScene" uid="uid://c4lhoo8iabyeb" path="res://assets/objects/coin.tscn" id="6_4yusq"]
 [ext_resource type="Script" uid="uid://ys4ijy3uag5c" path="res://assets/scripts/camera_limiter.gd" id="7_vh25t"]
 [ext_resource type="PackedScene" uid="uid://2lvlihxg6wel" path="res://assets/objects/finish_flag.tscn" id="8_hdxyo"]
@@ -58,7 +58,7 @@ position = Vector2(1984, 176)
 scale = Vector2(20, 4)
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=475177727]
-stream = ExtResource("5_pyk6r")
+stream = ExtResource("5_jil0d")
 volume_db = -6.789
 autoplay = true
 
