@@ -24,5 +24,5 @@ func _input(event: InputEvent) -> void:
 	CurrentPlayer.visible = true
 		
 	EntranceManager.currentEntrance = "START"
-	get_tree().change_scene_to_file("res://assets/scenes/node.tscn")
+	get_tree().change_scene_to_file("res://assets/scenes/level_1.tscn")
 	return

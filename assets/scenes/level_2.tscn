@@ -1,0 +1,58 @@
+[gd_scene format=3 uid="uid://dep758rl8i2ty"]
+
+[ext_resource type="PackedScene" uid="uid://b6dqgos8lqc81" path="res://assets/objects/collision_block.tscn" id="1_xkxx6"]
+[ext_resource type="Script" uid="uid://bj0w7eye8pxc6" path="res://assets/scripts/room_entrance.gd" id="2_cpfpa"]
+[ext_resource type="PackedScene" uid="uid://5c5g4i70g1mt" path="res://assets/objects/collision_slope.tscn" id="3_sapp8"]
+[ext_resource type="Script" uid="uid://ys4ijy3uag5c" path="res://assets/scripts/camera_limiter.gd" id="4_sapp8"]
+
+[node name="Level2" type="Node2D" unique_id=1214332116]
+
+[node name="RoomEntrance" type="Node2D" parent="." unique_id=1761142211]
+position = Vector2(256, 192)
+script = ExtResource("2_cpfpa")
+targetEntrance = "A"
+metadata/_custom_type_script = "uid://bj0w7eye8pxc6"
+
+[node name="CollisionBlock2" parent="." unique_id=817451786 instance=ExtResource("1_xkxx6")]
+position = Vector2(-112, 192)
+scale = Vector2(38, 4)
+
+[node name="CollisionBlock6" parent="." unique_id=841505385 instance=ExtResource("1_xkxx6")]
+position = Vector2(-32, -40)
+scale = Vector2(4, 20)
+
+[node name="CollisionSlope" parent="." unique_id=1302372209 instance=ExtResource("3_sapp8")]
+position = Vector2(384, 176)
+scale = Vector2(4, 1)
+
+[node name="CollisionSlope2" parent="." unique_id=337398005 instance=ExtResource("3_sapp8")]
+position = Vector2(448, 160)
+scale = Vector2(4, 1)
+
+[node name="CollisionBlock" parent="." unique_id=1335824262 instance=ExtResource("1_xkxx6")]
+position = Vector2(192, 88)
+scale = Vector2(12, 1)
+
+[node name="CollisionBlock3" parent="." unique_id=934778949 instance=ExtResource("1_xkxx6")]
+position = Vector2(512, 160)
+scale = Vector2(8, 1)
+
+[node name="CollisionBlock4" parent="." unique_id=42507852 instance=ExtResource("1_xkxx6")]
+position = Vector2(640, -8)
+scale = Vector2(1, 12)
+
+[node name="CollisionBlock5" parent="." unique_id=1602370351 instance=ExtResource("1_xkxx6")]
+position = Vector2(176, -88)
+scale = Vector2(1, 12)
+
+[node name="CollisionBlock7" parent="." unique_id=1955419492 instance=ExtResource("1_xkxx6")]
+position = Vector2(320, -8)
+scale = Vector2(32, 1)
+
+[node name="CameraLimiter" type="Container" parent="." unique_id=718667181]
+z_index = 20
+offset_top = -136.0
+offset_right = 1136.0
+offset_bottom = 208.0
+script = ExtResource("4_sapp8")
+metadata/_custom_type_script = "uid://ys4ijy3uag5c"
