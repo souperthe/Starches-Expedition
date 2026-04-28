@@ -27,6 +27,9 @@ func _physics_process(_delta: float) -> void:
 	if playerPosition.y < CurrentCamera.limit_bottom * 1.2:
 		return
 		
+	if parentPlayer.stateManager.currentState.name == "Actor":
+		return
+		
 	if fallen:
 		return
 		

@@ -16,3 +16,12 @@ func _levelTimeout() -> void:
 func _ready() -> void:
 	levelTimer.timeout.connect(_levelTimeout)
 	return
+
+
+func _unhandled_input(_event: InputEvent) -> void:
+	
+	if !Input.is_action_just_pressed("reset"):
+		return
+		
+	get_tree().change_scene_to_file("res://assets/scenes/title.tscn")
+	return

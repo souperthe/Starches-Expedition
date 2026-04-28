@@ -10,6 +10,7 @@ func _ready() -> void:
 	CurrentPlayer.visible = false
 	CurrentPlayer.hudLayer.visible = false
 	CurrentPlayer.reset()
+	MusicManager.songStop()
 	return
 
 
@@ -24,5 +25,6 @@ func _input(event: InputEvent) -> void:
 	CurrentPlayer.visible = true
 		
 	EntranceManager.currentEntrance = "START"
-	get_tree().change_scene_to_file("res://assets/scenes/level_2.tscn")
+	CurrentPlayer.reset()
+	get_tree().change_scene_to_file("uid://dep758rl8i2ty")
 	return

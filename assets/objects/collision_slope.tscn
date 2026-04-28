@@ -8,7 +8,7 @@ points = PackedVector2Array(8, -8, -8, 8, 8, 8)
 
 [node name="CollisionSlope" unique_id=817451786 instance=ExtResource("1_kdhp1")]
 
-[node name="32x32" parent="." index="0" unique_id=1707176351]
+[node name="Sprite" parent="." index="0" unique_id=1707176351]
 texture = ExtResource("2_mhbwg")
 
 [node name="CollisionShape2D" parent="StaticBody2D" parent_id_path=PackedInt32Array(866434644) index="0" unique_id=1480574209]

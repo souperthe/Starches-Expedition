@@ -1,0 +1,50 @@
+[gd_scene format=3 uid="uid://dix10ujoixygd"]
+
+[ext_resource type="PackedScene" uid="uid://brofe154hath4" path="res://assets/objects/hallway.tscn" id="1_8mvn4"]
+[ext_resource type="PackedScene" uid="uid://b6dqgos8lqc81" path="res://assets/objects/collision_block.tscn" id="2_a8e8j"]
+[ext_resource type="Script" uid="uid://ys4ijy3uag5c" path="res://assets/scripts/camera_limiter.gd" id="3_g44gv"]
+[ext_resource type="Script" uid="uid://bj0w7eye8pxc6" path="res://assets/scripts/room_entrance.gd" id="4_ucabx"]
+[ext_resource type="PackedScene" uid="uid://5c5g4i70g1mt" path="res://assets/objects/collision_slope.tscn" id="5_a8e8j"]
+
+[node name="Node2D" type="Node2D" unique_id=1272388]
+
+[node name="Hallway" parent="." unique_id=609587037 instance=ExtResource("1_8mvn4")]
+position = Vector2(72, 0)
+scale = Vector2(1, 4)
+targetScene = "uid://dep758rl8i2ty"
+targetEntrance = "A"
+
+[node name="CollisionBlock" parent="." unique_id=817451786 instance=ExtResource("2_a8e8j")]
+position = Vector2(-96, 64)
+scale = Vector2(12, 1)
+
+[node name="CollisionBlock2" parent="." unique_id=435754320 instance=ExtResource("2_a8e8j")]
+position = Vector2(0, -64)
+scale = Vector2(12, 4)
+
+[node name="CameraLimiter" type="Container" parent="." unique_id=266354278]
+z_index = 20
+offset_left = -584.0
+offset_top = -256.0
+offset_right = 56.0
+offset_bottom = 272.0
+script = ExtResource("3_g44gv")
+metadata/_custom_type_script = "uid://ys4ijy3uag5c"
+
+[node name="RoomEntrance" type="Node2D" parent="." unique_id=1341825876]
+position = Vector2(32, 64)
+script = ExtResource("4_ucabx")
+targetEntrance = "A"
+metadata/_custom_type_script = "uid://bj0w7eye8pxc6"
+
+[node name="CollisionSlope" parent="." unique_id=1191359098 instance=ExtResource("5_a8e8j")]
+position = Vector2(-160, 64)
+scale = Vector2(4, 2)
+
+[node name="CollisionSlope2" parent="." unique_id=625560686 instance=ExtResource("5_a8e8j")]
+position = Vector2(-224, 96)
+scale = Vector2(4, 2)
+
+[node name="CollisionBlock3" parent="." unique_id=47212343 instance=ExtResource("2_a8e8j")]
+position = Vector2(-320, 128)
+scale = Vector2(6, 12)

@@ -92,7 +92,7 @@ soundManager = NodePath("../SoundManager")
 [node name="StateManager" type="Node" parent="." unique_id=1586120249 node_paths=PackedStringArray("_parentPlayer", "_initalState")]
 script = ExtResource("3_jg13i")
 _parentPlayer = NodePath("..")
-_initalState = NodePath("Idle")
+_initalState = NodePath("Actor")
 
 [node name="Idle" type="Node" parent="StateManager" unique_id=345682952]
 script = ExtResource("5_nqkij")

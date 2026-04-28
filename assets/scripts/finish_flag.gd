@@ -14,7 +14,7 @@ func _bodyEntered(body:Node) -> void:
 		return
 		
 	completed = true
-	levelMusic.seek(165.59)
+	
 	CurrentPlayer.stateManager.switchState("actor")
 	ScoreManager.levelEnded = Time.get_unix_time_from_system()
 	ScoreManager.levelTimeRemaining = ScoreManager.levelTimer.time_left

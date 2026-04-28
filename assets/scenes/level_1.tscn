@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://8n0pad1lk48h"]
 
+[ext_resource type="Script" uid="uid://dqcrput51x726" path="res://assets/scripts/level.gd" id="1_ir25h"]
 [ext_resource type="PackedScene" uid="uid://b6dqgos8lqc81" path="res://assets/objects/collision_block.tscn" id="2_166dq"]
 [ext_resource type="PackedScene" uid="uid://5c5g4i70g1mt" path="res://assets/objects/collision_slope.tscn" id="3_cx38m"]
 [ext_resource type="PackedScene" uid="uid://c4fxx2lj5iacm" path="res://assets/objects/collision_platform.tscn" id="4_idmui"]
@@ -8,10 +9,12 @@
 [ext_resource type="PackedScene" uid="uid://c4lhoo8iabyeb" path="res://assets/objects/coin.tscn" id="6_4yusq"]
 [ext_resource type="Script" uid="uid://ys4ijy3uag5c" path="res://assets/scripts/camera_limiter.gd" id="7_vh25t"]
 [ext_resource type="PackedScene" uid="uid://2lvlihxg6wel" path="res://assets/objects/finish_flag.tscn" id="8_hdxyo"]
+[ext_resource type="Script" uid="uid://de44qasu6i3k6" path="res://assets/scripts/music_player.gd" id="9_kwwwe"]
 [ext_resource type="Texture2D" uid="uid://fdkt2ssyev2e" path="res://assets/images/control _guide.png" id="9_nrq8k"]
 
 [node name="Node" type="Node2D" unique_id=553185642]
-position = Vector2(1, 0)
+script = ExtResource("1_ir25h")
+levelTime = 85.0
 
 [node name="CameraLimiter" type="Container" parent="." unique_id=719257743]
 z_index = 20
@@ -56,11 +59,6 @@ scale = Vector2(-6, 3)
 [node name="CollisionBlock4" parent="." unique_id=653289626 instance=ExtResource("2_166dq")]
 position = Vector2(1984, 176)
 scale = Vector2(20, 4)
-
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=475177727]
-stream = ExtResource("5_jil0d")
-volume_db = -6.789
-autoplay = true
 
 [node name="RoomEntrance" type="Node2D" parent="." unique_id=603092067]
 position = Vector2(128, 192)
@@ -698,7 +696,7 @@ scale = Vector2(5, 12)
 
 [node name="FinishFlag" parent="." unique_id=593120254 node_paths=PackedStringArray("levelMusic") instance=ExtResource("8_hdxyo")]
 position = Vector2(11472, -8)
-levelMusic = NodePath("../AudioStreamPlayer")
+levelMusic = NodePath("")
 
 [node name="ControlGuide" type="Sprite2D" parent="." unique_id=929377802]
 z_index = -2
@@ -754,3 +752,8 @@ position = Vector2(11463, -136)
 
 [node name="Coin123" parent="." unique_id=1724871046 instance=ExtResource("6_4yusq")]
 position = Vector2(11487, -136)
+
+[node name="MusicPlayer" type="Node" parent="." unique_id=748926292]
+script = ExtResource("9_kwwwe")
+targetSong = ExtResource("5_jil0d")
+metadata/_custom_type_script = "uid://de44qasu6i3k6"

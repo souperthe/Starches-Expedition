@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://brofe154hath4"]
+
+[ext_resource type="Script" uid="uid://dhduu6ot0cj1c" path="res://assets/scripts/hallway.gd" id="1_4545e"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4545e"]
+size = Vector2(16, 16)
+
+[node name="Hallway" type="Node2D" unique_id=609587037 node_paths=PackedStringArray("hallwayArea")]
+script = ExtResource("1_4545e")
+hallwayArea = NodePath("Area2D")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1706133363]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=665559593]
+position = Vector2(8, 8)
+shape = SubResource("RectangleShape2D_4545e")

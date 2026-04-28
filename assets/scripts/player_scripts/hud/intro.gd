@@ -12,6 +12,10 @@ func _introFinished() -> void:
 func _introPlay() -> void:
 	show()
 	animator.play("play_intro")
+	
+	var currentLevel:Level = get_tree().current_scene
+	
+	ScoreManager.levelTimer.wait_time = currentLevel.levelTime
 	CurrentPlayer.stateManager.switchState("actor")
 	CurrentPlayer.velocity = Vector2.ZERO
 	CurrentPlayer.animationManager.animationPlay("level_start", 0.3)
