@@ -50,14 +50,15 @@ position = Vector2(640, -8)
 scale = Vector2(1, 12)
 
 [node name="CollisionBlock5" parent="." unique_id=1602370351 instance=ExtResource("1_xkxx6")]
-position = Vector2(176, -168)
-scale = Vector2(1, 17)
+position = Vector2(176, -104)
+scale = Vector2(1, 13)
 
 [node name="CollisionBlock7" parent="." unique_id=1955419492 instance=ExtResource("1_xkxx6")]
 position = Vector2(320, -8)
 scale = Vector2(32, 1)
 
 [node name="CameraLimiter" type="Container" parent="." unique_id=718667181]
+visible = false
 z_index = 20
 offset_left = 16.0
 offset_top = -344.0
@@ -71,8 +72,8 @@ position = Vector2(0, -104)
 scale = Vector2(12, 8)
 
 [node name="CollisionBlock9" parent="." unique_id=1652913902 instance=ExtResource("1_xkxx6")]
-position = Vector2(176, -168)
-scale = Vector2(32, 1)
+position = Vector2(256, -168)
+scale = Vector2(28, 1)
 
 [node name="CollisionBlock10" parent="." unique_id=932432683 instance=ExtResource("1_xkxx6")]
 position = Vector2(512, -40)
@@ -266,3 +267,11 @@ position = Vector2(40, -104)
 script = ExtResource("2_cpfpa")
 targetEntrance = "A"
 metadata/_custom_type_script = "uid://bj0w7eye8pxc6"
+
+[node name="CollisionBlock19" parent="." unique_id=344377005 instance=ExtResource("1_xkxx6")]
+position = Vector2(256, -168)
+scale = Vector2(1, 4)
+
+[node name="CollisionBlock20" parent="." unique_id=314532731 instance=ExtResource("1_xkxx6")]
+position = Vector2(192, -104)
+scale = Vector2(5, 1)

@@ -77,7 +77,7 @@ fallzoneLaugh = NodePath("FallzoneLaugh")
 
 [node name="FallzoneLaugh" type="AudioStreamPlayer" parent="FallzoneManager" unique_id=190420267]
 stream = SubResource("AudioStreamRandomizer_7lv6i")
-volume_db = -5.0
+volume_db = -10.0
 pitch_scale = 1.2
 
 [node name="SoundManager" type="Node" parent="." unique_id=461190683 node_paths=PackedStringArray("soundHolder")]
@@ -149,9 +149,9 @@ pitch_scale = 0.8
 [node name="PlayerHUD" parent="." unique_id=2104762548 instance=ExtResource("14_1qp14")]
 
 [node name="LeftFloorCheck" type="RayCast2D" parent="." unique_id=979143104]
-position = Vector2(-32, -9.06)
+position = Vector2(-64, -9.06)
 target_position = Vector2(0, 15)
 
 [node name="RightFloorCheck" type="RayCast2D" parent="." unique_id=1125878240]
-position = Vector2(32, -9.06)
+position = Vector2(64, -9.06)
 target_position = Vector2(0, 15)

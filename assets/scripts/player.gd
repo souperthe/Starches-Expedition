@@ -35,8 +35,11 @@ var inputDown:String = "player_down"
 
 func reset() -> void:
 	ScoreManager.currentScore = 0
+	ScoreManager.collectedCoins.clear()
 	CommonSignals.updateCoins.emit(0)
 	fallzoneManager.fallen = false
+	velocity = Vector2.ZERO
+	runPhysics = false
 	hudLayer.show()
 	$PlayerHUD/Intro/AnimationPlayer.play("RESET")
 	_setControllerIndex()

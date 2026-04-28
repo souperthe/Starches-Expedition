@@ -8,6 +8,8 @@ var levelBegan:float
 var levelEnded:float
 var levelTimeRemaining:float
 
+var collectedCoins:Array[String] = []
+
 
 func _levelTimeout() -> void:
 	get_tree().change_scene_to_file("res://assets/scenes/title.tscn")

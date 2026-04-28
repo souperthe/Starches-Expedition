@@ -6,6 +6,8 @@ class_name Collectable extends Node2D
 @export var scoreVisual:PackedScene
 @export var coinType:String = "coin"
 
+var collectedName:String
+
 var _visualColors:Dictionary[bool, Color] = {
 	true: Color.RED,
 	false: Color.GREEN
@@ -42,11 +44,19 @@ func _bodyEntered(node:Node) -> void:
 		
 	ScoreManager.currentScore += value
 	ScoreManager.coinCollected.play()
+	ScoreManager.collectedCoins.append(collectedName)
 	_createScoreVisual(value)
 	queue_free()
 	return
 
 func _ready() -> void:
+	
+	collectedName = get_tree().current_scene.scene_file_path + name
+	
+	if ScoreManager.collectedCoins.has(collectedName):
+		queue_free()
+		return
+	
 	animator.play("default")
 	collectionArea.body_entered.connect(_bodyEntered)
 	return

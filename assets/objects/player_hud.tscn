@@ -15,6 +15,7 @@
 [ext_resource type="Script" uid="uid://kiheyc2hy2wu" path="res://assets/scripts/player_scripts/hud/coin_icon.gd" id="11_il7t8"]
 [ext_resource type="AudioStream" uid="uid://bnu2y4e77isto" path="res://assets/sound/sfx/freesound_community-coin-flip-37787.wav" id="13_x32s3"]
 [ext_resource type="Texture2D" uid="uid://bq5vgll3lhrgf" path="res://assets/images/hud/general/hud_time.swf/frames/1.svg" id="14_720vk"]
+[ext_resource type="AudioStream" uid="uid://cschsmc050hkt" path="res://assets/sound/sfx/cha ching.wav" id="15_0rfkh"]
 [ext_resource type="Texture2D" uid="uid://blbuy1h35t81w" path="res://assets/images/hud/general/hud_time.swf/frames/2.svg" id="15_il7t8"]
 [ext_resource type="Script" uid="uid://d3sbeodgr2ax7" path="res://assets/scripts/player_scripts/hud/time_icon.gd" id="15_tb0ny"]
 
@@ -230,6 +231,11 @@ random_pitch = 1.0656005
 streams_count = 1
 stream_0/stream = ExtResource("13_x32s3")
 
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_ojyjy"]
+random_pitch = 1.0656005
+streams_count = 1
+stream_0/stream = ExtResource("15_0rfkh")
+
 [sub_resource type="AnimatedTexture" id="AnimatedTexture_tb0ny"]
 frames = 2
 frame_0/texture = ExtResource("14_720vk")
@@ -414,6 +420,11 @@ offset_bottom = 77.5
 stream = SubResource("AudioStreamRandomizer_omcjk")
 volume_db = -15.047
 pitch_scale = 1.5
+
+[node name="CoinFinalize" type="AudioStreamPlayer" parent="RegularHud/CoinIcon" unique_id=836071863]
+stream = SubResource("AudioStreamRandomizer_ojyjy")
+volume_db = -15.047
+pitch_scale = 0.9
 
 [node name="TimeIcon" type="Control" parent="RegularHud" unique_id=279966591 node_paths=PackedStringArray("timerLabel")]
 anchors_preset = 0

@@ -14,6 +14,10 @@ func _updateCoins(currentScore:int) -> void:
 		coinCurentTween.kill()
 	
 	coinLabel.text = str(currentScore)
+	
+	if currentScore == 0:
+		return
+		
 	coinIcon.scale = Vector2(0.3,0.3)
 	
 	coinCurentTween = get_tree().create_tween()

@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://cschsmc050hkt"
+path="res://.godot/imported/cha ching.wav-81e40f9014aba4b5ec35a0afa0c4230a.sample"
+
+[deps]
+
+source_file="res://assets/sound/sfx/cha ching.wav"
+dest_files=["res://.godot/imported/cha ching.wav-81e40f9014aba4b5ec35a0afa0c4230a.sample"]
+
+[params]
+
+force/8_bit=true
+force/mono=true
+force/max_rate=true
+force/max_rate_hz=11025.0
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=1
