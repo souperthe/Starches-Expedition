@@ -12,7 +12,7 @@
 [node name="RoomEntrance" type="Node2D" parent="." unique_id=1761142211]
 position = Vector2(256, 192)
 script = ExtResource("2_cpfpa")
-targetEntrance = "A"
+targetEntrance = "START"
 metadata/_custom_type_script = "uid://bj0w7eye8pxc6"
 
 [node name="CollisionBlock2" parent="." unique_id=817451786 instance=ExtResource("1_xkxx6")]
@@ -52,6 +52,7 @@ position = Vector2(320, -8)
 scale = Vector2(32, 1)
 
 [node name="CameraLimiter" type="Container" parent="." unique_id=718667181]
+visible = false
 z_index = 20
 offset_left = 16.0
 offset_top = -344.0

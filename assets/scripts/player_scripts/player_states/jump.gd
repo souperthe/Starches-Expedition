@@ -55,6 +55,11 @@ func stateProcess(delta:float) -> void:
 		player.coyoteTime = -500
 		return
 		
+	#if player.coyoteTime > 0:
+		#player.sprite.modulate = Color.RED
+	#else:
+		#player.sprite.modulate = Color.WHITE
+		
 	if player.controlDirection.x != 0:
 		player.sprite.scale.x = player.controlDirection.x
 		
