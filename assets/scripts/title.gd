@@ -15,6 +15,38 @@ var canInput:bool = true
 var swipeTime:float = 0.4
 var lastDirection:float = 1
 
+func _enterLevel() -> void:
+	canInput = false
+	nudgeLeft.self_modulate.a = 0
+	nudgeRight.self_modulate.a = 0
+	
+	var musicTween:Tween = get_tree().create_tween()
+	musicTween.tween_property(MusicManager.songEmitter, "volume_linear", 0.2, 0.4)
+	
+	await get_tree().create_timer(0.5).timeout
+	
+	var growTween:Tween = get_tree().create_tween()
+	var spinTween:Tween = get_tree().create_tween()
+	var fadeTween:Tween = get_tree().create_tween()
+	musicTween = get_tree().create_tween()
+	musicTween.set_parallel(true)
+	
+	spinTween.tween_property(levelPortait, "rotation", 360*4, 90)
+	growTween.tween_property(levelPortait, "scale", Vector2(5,5), 3)
+	fadeTween.tween_property($CanvasLayer/Control/ColorRect, "color:a", 1, 1)
+	musicTween.tween_property(MusicManager.songEmitter, "pitch_scale", 2, 1)
+	musicTween.tween_property(MusicManager.songEmitter, "volume_linear", 0, 1)
+	
+	await fadeTween.finished
+	
+	await get_tree().create_timer(0.5).timeout
+	
+	
+
+	ScoreManager.levelCurrent = currentLevel.levelName.to_lower()
+	EntranceManager.transitionRoom(currentLevel.levelStartScene.resource_path, "start")
+	return
+
 func _swipeTween(fakePortait:TextureRect, realPortait:TextureRect) -> void:
 	
 	var swipeTween:Tween = get_tree().create_tween()
@@ -122,9 +154,7 @@ func _input(_event: InputEvent) -> void:
 		return
 		
 	if Input.is_action_just_pressed("level_enter"):
-		EntranceManager.currentEntrance = "start"
-		ScoreManager.levelCurrent = currentLevel.levelName.to_lower()
-		get_tree().change_scene_to_packed(currentLevel.levelStartScene)
+		_enterLevel()
 		return
 		
 	_levelSelectionInput()

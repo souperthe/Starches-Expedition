@@ -10,12 +10,7 @@ func _bodyEntered(body:Node) -> void:
 	if body != CurrentPlayer:
 		return
 		
-	EntranceManager.currentEntrance = targetEntrance
-	
-	var roomTransition:RoomTransition = RoomTransition.new()
-	roomTransition.targetScene = targetScene
-	
-	EntranceManager.add_child(roomTransition)
+	EntranceManager.transitionRoom(targetScene, targetEntrance)
 		
 	return
 	

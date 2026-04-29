@@ -243,6 +243,16 @@ frame_0/texture = ExtResource("14_720vk")
 frame_1/texture = ExtResource("15_il7t8")
 frame_1/duration = 1.0
 
+[sub_resource type="SystemFont" id="SystemFont_ojyjy"]
+font_names = PackedStringArray("Comic Sans MS")
+
+[sub_resource type="LabelSettings" id="LabelSettings_ls4xb"]
+font = SubResource("SystemFont_ojyjy")
+font_size = 13
+font_color = Color(1, 0, 0, 1)
+outline_size = 5
+outline_color = Color(0.43605796, 8.663535e-07, 1.6845763e-07, 1)
+
 [node name="PlayerHUD" type="CanvasLayer" unique_id=2104762548]
 script = ExtResource("1_yt60p")
 
@@ -475,7 +485,8 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-text = "fart:
+text = "fart -> hi
 pee:
 "
+label_settings = SubResource("LabelSettings_ls4xb")
 vertical_alignment = 2

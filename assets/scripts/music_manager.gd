@@ -10,9 +10,17 @@ func _ready() -> void:
 	return
 	
 func songPlayPacked(songStream:AudioStream, songSeek:bool=false) -> void:
-	var songPath:String = songStream.resource_path
+	var songPosition:float = songEmitter.get_playback_position()
 	
-	songPlay(songPath, songSeek)
+	songEmitter.stream = songStream
+	songEmitter.play()
+	songEmitter.volume_linear = songVolume
+	songEmitter.pitch_scale = 1
+	
+	if songSeek:
+		songEmitter.seek(songPosition)
+		
+	songCurrent = songStream.resource_path
 	return
 	
 func songStop() -> void:
@@ -22,14 +30,6 @@ func songStop() -> void:
 	return
 
 func songPlay(songPath:String, songSeek:bool=false) -> void:
-	var songPosition:float = songEmitter.get_playback_position()
 	var songLoaded:AudioStream = load(songPath)
-	
-	songEmitter.stream = songLoaded
-	songEmitter.play()
-	
-	if songSeek:
-		songEmitter.seek(songPosition)
-		
-	songCurrent = songPath
+	songPlayPacked(songLoaded, songSeek)
 	return

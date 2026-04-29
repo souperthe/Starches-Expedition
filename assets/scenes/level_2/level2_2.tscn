@@ -281,12 +281,12 @@ position = Vector2(-3072, -192)
 scale = Vector2(8, 2)
 
 [node name="CollisionBlock22" parent="." unique_id=1694282662 instance=ExtResource("2_a8e8j")]
-position = Vector2(-4112, -392)
+position = Vector2(-4112, -504)
 scale = Vector2(5, 64)
 
 [node name="CollisionBlock23" parent="." unique_id=735139063 instance=ExtResource("2_a8e8j")]
 position = Vector2(-4032, 0)
-scale = Vector2(4, 64)
+scale = Vector2(4, 20)
 
 [node name="Coin33" parent="." unique_id=194980945 instance=ExtResource("7_ucabx")]
 position = Vector2(-3040, -192)
