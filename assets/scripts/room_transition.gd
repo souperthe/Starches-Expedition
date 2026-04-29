@@ -1,17 +1,20 @@
 class_name RoomTransition extends CanvasLayer
 
 var fadeRect:ColorRect
-var fadeTime:float = 0.2
+var fadeTime:float = 0.3
+var fakeWait:float = 0
 var targetScene:String
 
 func _rectOut() -> void:
 	
-	var outTween:Tween = get_tree().create_tween()
-	outTween.tween_property(fadeRect, "modulate:a", 0, fadeTime)
+	await get_tree().create_timer(fakeWait).timeout
 	
 	get_tree().change_scene_to_file(targetScene)
 	
 	await CommonSignals.sentToEntrance
+	
+	var outTween:Tween = get_tree().create_tween()
+	outTween.tween_property(fadeRect, "modulate:a", 0, fadeTime)
 	
 	CurrentPlayer.runPhysics = true
 	return
