@@ -38,20 +38,31 @@ func _enterLevel() -> void:
 	musicTween.tween_property(MusicManager.songEmitter, "volume_linear", 0, 1)
 	
 	await fadeTween.finished
-	
-	await get_tree().create_timer(0.5).timeout
-	
-	
 
 	ScoreManager.levelCurrent = currentLevel.levelName.to_lower()
-	EntranceManager.transitionRoom(currentLevel.levelStartScene.resource_path, "start")
+	EntranceManager.transitionRoom(currentLevel.levelStartScene.resource_path, "start", 1)
+	return
+	
+func _displayStats(targetStats:Dictionary) -> void:
+	
+	var finalText:String = ""
+	
+	for index in targetStats:
+		var value:Variant = targetStats[index]
+		
+		finalText = finalText + str(index, ": ", value, "\n")
+		continue
+		
+	levelStats.text = finalText
 	return
 
 func _swipeTween(fakePortait:TextureRect, realPortait:TextureRect) -> void:
 	
 	var swipeTween:Tween = get_tree().create_tween()
+	
 	nudgeLeft.self_modulate.a = 0
 	nudgeRight.self_modulate.a = 0
+	
 	swipeTween.set_parallel(true)
 	swipeTween.set_trans(Tween.TRANS_SINE)
 	swipeTween.tween_property(fades, "modulate:a", 0, swipeTime/2)
@@ -70,7 +81,7 @@ func _swipeTween(fakePortait:TextureRect, realPortait:TextureRect) -> void:
 	
 	if ScoreManager.levelBests.has(levelName):
 		var currentStats:Dictionary = ScoreManager.levelBests[levelName]
-		levelStats.text = str(currentStats)
+		_displayStats(currentStats)
 	else:
 		levelStats.text = "No current last"
 	

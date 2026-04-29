@@ -1,8 +1,8 @@
 class_name RoomTransition extends CanvasLayer
 
 var fadeRect:ColorRect
-var fadeTime:float = 0.3
-var fakeWait:float = 0
+var fadeTime:float = 0.2
+var fakeWait:float = 0.1
 var targetScene:String
 
 func _rectOut() -> void:
@@ -29,6 +29,7 @@ func _rectIn() -> void:
 	return
 
 func _ready() -> void:
+	layer = 10
 	fadeRect = ColorRect.new()
 	fadeRect.set_anchors_preset(Control.PRESET_FULL_RECT)
 	fadeRect.color = Color.BLACK
