@@ -436,3 +436,12 @@ position = Vector2(-3408, -200)
 
 [node name="Coin53" parent="." unique_id=949079436 instance=ExtResource("7_ucabx")]
 position = Vector2(-3392, -192)
+
+[node name="Coin39" parent="." unique_id=713340088 instance=ExtResource("7_ucabx")]
+position = Vector2(-4016, 0)
+
+[node name="Coin41" parent="." unique_id=169011637 instance=ExtResource("7_ucabx")]
+position = Vector2(-4000, -16)
+
+[node name="Coin50" parent="." unique_id=241951128 instance=ExtResource("7_ucabx")]
+position = Vector2(-3984, 0)

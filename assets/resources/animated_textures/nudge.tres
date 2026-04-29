@@ -2,10 +2,13 @@
 
 [ext_resource type="Texture2D" uid="uid://c036nfcbwh2kf" path="res://assets/images/title/ui_movenudge.swf/frames/1.svg" id="1_lf41y"]
 [ext_resource type="Texture2D" uid="uid://bptymghx6innd" path="res://assets/images/title/ui_movenudge.swf/frames/2.svg" id="2_n056d"]
+[ext_resource type="Texture2D" uid="uid://c3og25g21q07y" path="res://assets/images/title/ui_movenudge.swf/frames/3.svg" id="3_n056d"]
 
 [resource]
-frames = 2
-speed_scale = 2.0
+frames = 3
+speed_scale = 12.0
 frame_0/texture = ExtResource("1_lf41y")
 frame_1/texture = ExtResource("2_n056d")
 frame_1/duration = 1.0
+frame_2/texture = ExtResource("3_n056d")
+frame_2/duration = 1.0
