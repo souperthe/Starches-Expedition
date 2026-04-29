@@ -5,7 +5,9 @@ class_name HudIntro extends Control
 func _introFinished() -> void:
 	CurrentPlayer.stateManager.switchState("idle")
 	ScoreManager.levelTimer.start()
-	ScoreManager.levelBegan = Time.get_unix_time_from_system()
+	ScoreManager.levelBegan = Time.get_ticks_msec()
+	
+	print(ScoreManager.levelBegan)
 	CurrentPlayer.runPhysics = true
 	return
 	

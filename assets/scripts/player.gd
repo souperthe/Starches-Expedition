@@ -37,6 +37,9 @@ func reset() -> void:
 	ScoreManager.currentScore = 0
 	ScoreManager.collectedCoins.clear()
 	CommonSignals.updateCoins.emit(0)
+	ScoreManager.levelTimer.stop()
+	stateManager.switchState("actor")
+	sprite.scale.x = 1
 	fallzoneManager.fallen = false
 	velocity = Vector2.ZERO
 	runPhysics = false

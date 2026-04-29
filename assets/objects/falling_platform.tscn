@@ -22,6 +22,9 @@ stream_0/stream = ExtResource("4_n58xj")
 script = ExtResource("2_oudh3")
 playerArea = NodePath("PlayerArea")
 
+[node name="Sprite" parent="." index="0" unique_id=1707176351]
+modulate = Color(0.22846499, 0.28586462, 1, 1)
+
 [node name="PlayerArea" type="Area2D" parent="." index="2" unique_id=2146562540]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerArea" index="0" unique_id=376050412]

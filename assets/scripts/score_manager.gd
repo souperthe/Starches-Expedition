@@ -9,6 +9,8 @@ var levelEnded:float
 var levelTimeRemaining:float
 
 var collectedCoins:Array[String] = []
+var levelCurrent:String
+var levelBests:Dictionary[String, Dictionary] = {}
 
 
 func _levelTimeout() -> void:

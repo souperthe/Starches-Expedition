@@ -18,6 +18,7 @@
 [ext_resource type="AudioStream" uid="uid://cschsmc050hkt" path="res://assets/sound/sfx/cha ching.wav" id="15_0rfkh"]
 [ext_resource type="Texture2D" uid="uid://blbuy1h35t81w" path="res://assets/images/hud/general/hud_time.swf/frames/2.svg" id="15_il7t8"]
 [ext_resource type="Script" uid="uid://d3sbeodgr2ax7" path="res://assets/scripts/player_scripts/hud/time_icon.gd" id="15_tb0ny"]
+[ext_resource type="Script" uid="uid://d0epuv1umdsfv" path="res://assets/scripts/player_scripts/hud/debug_data.gd" id="19_ojyjy"]
 
 [sub_resource type="Animation" id="Animation_2nd5j"]
 length = 0.001
@@ -455,3 +456,26 @@ offset_right = 492.0
 offset_bottom = 500.0
 scale = Vector2(0.15, 0.15)
 texture = SubResource("AnimatedTexture_tb0ny")
+
+[node name="DebugData" type="Control" parent="." unique_id=316654866 node_paths=PackedStringArray("debugLabel")]
+layout_mode = 3
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -170.0
+offset_right = 579.0
+grow_vertical = 0
+script = ExtResource("19_ojyjy")
+debugLabel = NodePath("Label")
+
+[node name="Label" type="Label" parent="DebugData" unique_id=1721669943]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "fart:
+pee:
+"
+vertical_alignment = 2

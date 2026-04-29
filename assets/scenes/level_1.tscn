@@ -14,7 +14,7 @@
 
 [node name="Node" type="Node2D" unique_id=553185642]
 script = ExtResource("1_ir25h")
-levelTime = 85.0
+levelTime = 80.0
 
 [node name="CameraLimiter" type="Container" parent="." unique_id=719257743]
 z_index = 20
@@ -694,9 +694,8 @@ scale = Vector2(2, 2)
 position = Vector2(11496, -288)
 scale = Vector2(5, 12)
 
-[node name="FinishFlag" parent="." unique_id=593120254 node_paths=PackedStringArray("levelMusic") instance=ExtResource("8_hdxyo")]
+[node name="FinishFlag" parent="." unique_id=593120254 instance=ExtResource("8_hdxyo")]
 position = Vector2(11472, -8)
-levelMusic = NodePath("")
 
 [node name="ControlGuide" type="Sprite2D" parent="." unique_id=929377802]
 z_index = -2

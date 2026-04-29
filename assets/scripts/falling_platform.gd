@@ -6,12 +6,19 @@ var _falling:bool = false
 var _fallingVelocity:float = 0
 var _shaking:bool = false
 var _previousPosition:Vector2
+var _reachedBottom:bool = false
 
 func _process(delta: float) -> void:
 	
 	if _shaking:
 		$Sprite.offset.x = randf_range(-2, 2)
 		$Sprite.offset.y = randf_range(-2, 2)
+		return
+		
+	_reachedBottom = position.y > CurrentCamera.limit_bottom
+	
+	if _reachedBottom:
+		set_process(false)
 		return
 		
 	_fallingVelocity += 40 * delta
@@ -23,7 +30,9 @@ func _reset() -> void:
 	position = _previousPosition
 	_falling = false
 	_shaking = false
-	$Sprite.modulate = Color.WHITE
+	_reachedBottom = false
+	$Sprite.offset = Vector2.ZERO
+	$Sprite.modulate = Color.BLUE
 	set_process(false)
 	$StaticBody2D/CollisionShape2D.disabled = false
 	return
@@ -44,6 +53,7 @@ func _bodyEntered(body:Node2D) -> void:
 	set_process(true)
 		
 	_falling = true
+	_reachedBottom = false
 	$Sprite.modulate = Color.RED
 	_shaking = true
 	$Shake.play()

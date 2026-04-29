@@ -16,8 +16,22 @@ func _bodyEntered(body:Node) -> void:
 	completed = true
 	
 	CurrentPlayer.stateManager.switchState("actor")
-	ScoreManager.levelEnded = Time.get_unix_time_from_system()
+	ScoreManager.levelEnded = Time.get_ticks_msec()
 	ScoreManager.levelTimeRemaining = ScoreManager.levelTimer.time_left
+	
+	var timeSpent:float = (ScoreManager.levelEnded - ScoreManager.levelBegan) / 1000.0
+	var generalScore:float = ScoreManager.levelTimeRemaining * ScoreManager.currentScore
+	
+	print(timeSpent)
+
+	ScoreManager.levelBests[ScoreManager.levelCurrent] = {}
+	ScoreManager.levelBests[ScoreManager.levelCurrent] = {
+		"coins": ScoreManager.currentScore,
+		"time_remaining": snappedf(ScoreManager.levelTimer.time_left, 0.01),
+		"time_spent": snappedf(timeSpent, 0.01),
+		"general_score": snappedf(generalScore, 0.01),
+	}
+	
 	ScoreManager.levelTimer.stop()
 	$AnimatedSprite2D.play("finished")
 	
