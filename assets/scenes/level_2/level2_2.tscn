@@ -421,6 +421,8 @@ metadata/_custom_type_script = "uid://bj0w7eye8pxc6"
 [node name="Hallway2" parent="." unique_id=70322429 instance=ExtResource("1_8mvn4")]
 position = Vector2(72, -384)
 scale = Vector2(1, 4)
+targetScene = "uid://cygbr8q5e4c4a"
+targetEntrance = "A"
 
 [node name="Coin38" parent="." unique_id=2093090779 instance=ExtResource("7_ucabx")]
 position = Vector2(-3456, -192)

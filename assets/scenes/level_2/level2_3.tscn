@@ -1,0 +1,37 @@
+[gd_scene format=3 uid="uid://cygbr8q5e4c4a"]
+
+[ext_resource type="PackedScene" uid="uid://b6dqgos8lqc81" path="res://assets/objects/collision_block.tscn" id="1_jouor"]
+[ext_resource type="Script" uid="uid://ys4ijy3uag5c" path="res://assets/scripts/camera_limiter.gd" id="2_qa4se"]
+[ext_resource type="PackedScene" uid="uid://brofe154hath4" path="res://assets/objects/hallway.tscn" id="3_6mpg5"]
+[ext_resource type="Script" uid="uid://bj0w7eye8pxc6" path="res://assets/scripts/room_entrance.gd" id="4_6mpg5"]
+
+[node name="Node2D" type="Node2D" unique_id=1069976884]
+
+[node name="CollisionBlock" parent="." unique_id=817451786 instance=ExtResource("1_jouor")]
+position = Vector2(-64, 192)
+scale = Vector2(12, 4)
+
+[node name="CollisionBlock2" parent="." unique_id=1065432450 instance=ExtResource("1_jouor")]
+position = Vector2(-160, 32)
+scale = Vector2(12, 6)
+
+[node name="CameraLimiter" type="Container" parent="." unique_id=1473448496]
+visible = false
+z_index = 20
+offset_right = 488.0
+offset_bottom = 256.0
+mouse_filter = 2
+script = ExtResource("2_qa4se")
+metadata/_custom_type_script = "uid://ys4ijy3uag5c"
+
+[node name="Hallway" parent="." unique_id=609587037 instance=ExtResource("3_6mpg5")]
+position = Vector2(-24, 128)
+scale = Vector2(1, 4)
+targetScene = "uid://dix10ujoixygd"
+targetEntrance = "B"
+
+[node name="RoomEntrance" type="Node2D" parent="." unique_id=2079085704]
+position = Vector2(24, 192)
+script = ExtResource("4_6mpg5")
+targetEntrance = "A"
+metadata/_custom_type_script = "uid://bj0w7eye8pxc6"

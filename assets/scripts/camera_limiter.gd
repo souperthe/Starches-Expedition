@@ -48,6 +48,8 @@ func _editorReady() -> void:
 	var newLabel:Label = Label.new()
 	var newLine:Line2D = Line2D.new()
 	
+	mouse_filter = Control.MOUSE_FILTER_IGNORE
+	
 	newLabel.text = _getLimits()
 	newLabel.z_index = 2
 	

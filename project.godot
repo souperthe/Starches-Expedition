@@ -12,6 +12,8 @@ config_version=5
 
 config/name="Starches Expedition"
 run/main_scene="uid://dhsgxv7iisb2o"
+config/use_custom_user_dir=true
+config/custom_user_dir_name="Benjamin/StarchesExpedition"
 config/features=PackedStringArray("4.6", "GL Compatibility")
 
 [autoload]

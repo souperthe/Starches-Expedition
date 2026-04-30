@@ -49,6 +49,9 @@ func _ready() -> void:
 		
 	CurrentPlayer.position = position 
 	CurrentCamera.position = position
+	
+	await get_tree().physics_frame
+	
 	CommonSignals.sentToEntrance.emit(desiredEntrance)
 	
 	return

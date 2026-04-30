@@ -44,6 +44,9 @@ func _bodyEntered(body:Node2D) -> void:
 		
 	if CurrentPlayer.fallzoneManager.fallen:
 		return
+		
+	if CurrentPlayer.velocity.y < -1:
+		return
 	
 	if _falling:
 		return

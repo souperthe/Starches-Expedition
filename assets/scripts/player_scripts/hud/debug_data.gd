@@ -8,7 +8,8 @@ func _process(_delta: float) -> void:
 		"Velocity -> ", CurrentPlayer.velocity.floor(), "\n",
 		"Position -> ", CurrentPlayer.position.floor(), "\n",
 		"State -> ", CurrentPlayer.stateManager.currentState, "\n",
-		"Last speed  -> ", floorf(CurrentPlayer.lastSpeed)
+		"Last speed  -> ", floorf(CurrentPlayer.lastSpeed), "\n",
+		"Coyote Time -> ", floorf(CurrentPlayer.coyoteTime)
 	)
 	
 	debugLabel.text = debugText

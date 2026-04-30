@@ -4,23 +4,25 @@ class_name ClassMusicManager extends Node
 
 var songCurrent:String = ""
 var songVolume:float = 0.5
+var songStream:AudioStream
 
 func _ready() -> void:
 	songEmitter.volume_linear = songVolume
 	return
 	
-func songPlayPacked(songStream:AudioStream, songSeek:bool=false) -> void:
+func songPlayPacked(targetStream:AudioStream, targetSeek:bool=false) -> void:
 	var songPosition:float = songEmitter.get_playback_position()
 	
-	songEmitter.stream = songStream
+	songEmitter.stream = targetStream
 	songEmitter.play()
 	songEmitter.volume_linear = songVolume
 	songEmitter.pitch_scale = 1
 	
-	if songSeek:
+	if targetSeek:
 		songEmitter.seek(songPosition)
 		
-	songCurrent = songStream.resource_path
+	songCurrent = targetStream.resource_path
+	songStream = targetStream
 	return
 	
 func songStop() -> void:
