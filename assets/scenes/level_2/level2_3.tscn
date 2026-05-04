@@ -4,6 +4,8 @@
 [ext_resource type="Script" uid="uid://ys4ijy3uag5c" path="res://assets/scripts/camera_limiter.gd" id="2_qa4se"]
 [ext_resource type="PackedScene" uid="uid://brofe154hath4" path="res://assets/objects/hallway.tscn" id="3_6mpg5"]
 [ext_resource type="Script" uid="uid://bj0w7eye8pxc6" path="res://assets/scripts/room_entrance.gd" id="4_6mpg5"]
+[ext_resource type="PackedScene" uid="uid://5c5g4i70g1mt" path="res://assets/objects/collision_slope.tscn" id="5_f8s1x"]
+[ext_resource type="PackedScene" uid="uid://c4fxx2lj5iacm" path="res://assets/objects/collision_platform.tscn" id="6_fnk1h"]
 
 [node name="Node2D" type="Node2D" unique_id=1069976884]
 
@@ -18,7 +20,8 @@ scale = Vector2(12, 6)
 [node name="CameraLimiter" type="Container" parent="." unique_id=1473448496]
 visible = false
 z_index = 20
-offset_right = 488.0
+offset_top = -328.0
+offset_right = 1264.0
 offset_bottom = 256.0
 mouse_filter = 2
 script = ExtResource("2_qa4se")
@@ -35,3 +38,17 @@ position = Vector2(24, 192)
 script = ExtResource("4_6mpg5")
 targetEntrance = "A"
 metadata/_custom_type_script = "uid://bj0w7eye8pxc6"
+
+[node name="CollisionSlope" parent="." unique_id=1170123946 instance=ExtResource("5_f8s1x")]
+position = Vector2(128, 160)
+scale = Vector2(4, 2)
+
+[node name="CollisionBlock3" parent="." unique_id=1250525494 instance=ExtResource("1_jouor")]
+position = Vector2(192, 160)
+scale = Vector2(9, 12)
+
+[node name="CollisionPlatform" parent="." unique_id=1707252071 instance=ExtResource("6_fnk1h")]
+position = Vector2(512, 128)
+scale = Vector2(8, 1)
+
+[node name="FileDialog" type="FileDialog" parent="." unique_id=224698756]

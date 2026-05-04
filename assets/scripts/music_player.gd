@@ -5,6 +5,9 @@ class_name MusicPlayer extends Node
 
 func _ready() -> void:
 	
+	if targetSong == null:
+		return
+	
 	if MusicManager.songCurrent == targetSong.resource_path:
 		return
 		

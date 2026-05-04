@@ -51,6 +51,7 @@ func _ready() -> void:
 		
 	switchState(_initalState.name)
 	
+	Console.add_command("player_set_state", switchState, ["String", "String", "String"], 1)
 	return
 	
 func _physics_process(delta: float) -> void:
