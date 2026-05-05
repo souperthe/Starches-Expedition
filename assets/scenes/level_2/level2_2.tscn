@@ -31,6 +31,7 @@ offset_left = -4080.0
 offset_top = -488.0
 offset_right = 56.0
 offset_bottom = 272.0
+mouse_filter = 2
 script = ExtResource("3_g44gv")
 metadata/_custom_type_script = "uid://ys4ijy3uag5c"
 
@@ -158,7 +159,7 @@ position = Vector2(-2560, 24)
 scale = Vector2(4, 64)
 
 [node name="CollisionBlock12" parent="." unique_id=904520491 instance=ExtResource("2_a8e8j")]
-position = Vector2(-2688, -24)
+position = Vector2(-2688, -14)
 scale = Vector2(4, 64)
 
 [node name="CollisionBlock13" parent="." unique_id=267964254 instance=ExtResource("2_a8e8j")]

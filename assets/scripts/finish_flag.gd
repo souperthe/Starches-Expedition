@@ -26,16 +26,21 @@ func _bodyEntered(body:Node) -> void:
 	ScoreManager.levelTimeRemaining = ScoreManager.levelTimer.time_left
 	
 	var timeSpent:float = (ScoreManager.levelEnded - ScoreManager.levelBegan) / 1000.0
-	#var generalScore:float = ScoreManager.levelTimeRemaining * ScoreManager.currentScore
+	var generalScore:float = ScoreManager.levelTimeRemaining * ScoreManager.currentScore
 	
 	print(timeSpent)
-
-	ScoreManager.levelBests[ScoreManager.levelCurrent] = {}
-	ScoreManager.levelBests[ScoreManager.levelCurrent] = {
+	
+	var saveData:Dictionary[String, Variant] = {
 		"coins": ScoreManager.currentScore,
 		"time_remaining": snappedf(ScoreManager.levelTimer.time_left, 0.01),
 		"time_spent": snappedf(timeSpent, 0.01),
+		"general_score: ": int(generalScore)
 	}
+	
+	ScoreManager.levelBests.erase(ScoreManager.levelCurrent)
+	ScoreManager.levelBests[ScoreManager.levelCurrent] = saveData
+	
+	print("ScoreManager -> ", ScoreManager.levelCurrent, "'s data has been written")
 	
 	ScoreManager.levelTimer.stop()
 	$AnimatedSprite2D.play("finished")

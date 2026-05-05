@@ -31,6 +31,7 @@ Console="*uid://ouiu5xh1cs8n"
 
 window/size/viewport_width=960
 window/size/viewport_height=540
+window/size/mode=3
 window/stretch/mode="canvas_items"
 
 [editor_plugins]

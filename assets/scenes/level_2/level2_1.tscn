@@ -16,7 +16,7 @@ script = ExtResource("1_3kka6")
 levelTime = 120.0
 
 [node name="RoomEntrance" type="Node2D" parent="." unique_id=1761142211]
-position = Vector2(256, 192)
+position = Vector2(192, 192)
 script = ExtResource("2_cpfpa")
 targetEntrance = "START"
 metadata/_custom_type_script = "uid://bj0w7eye8pxc6"

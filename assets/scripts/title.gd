@@ -46,11 +46,17 @@ func _enterLevel() -> void:
 func _displayStats(targetStats:Dictionary) -> void:
 	
 	var finalText:String = ""
+	var statKeys:Array = targetStats.keys()
 	
 	for index in targetStats:
 		var value:Variant = targetStats[index]
+		var indexNumber:int = statKeys.find(index)
+		var displayText:String = str(index, ": ", value)
 		
-		finalText = finalText + str(index, ": ", value, "\n")
+		if indexNumber != statKeys.size():
+			displayText += "\n"
+			
+		finalText = finalText + displayText
 		continue
 		
 	levelStats.text = finalText
