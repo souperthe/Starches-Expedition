@@ -14,7 +14,6 @@ func _registerState(targetState:PlayerState) -> void:
 	targetState.player = _parentPlayer
 	targetState.animator = _parentPlayer.animationManager
 	
-	
 	_allStates[stateName] = targetState
 	
 	return

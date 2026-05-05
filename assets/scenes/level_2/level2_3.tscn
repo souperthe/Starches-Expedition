@@ -6,6 +6,8 @@
 [ext_resource type="Script" uid="uid://bj0w7eye8pxc6" path="res://assets/scripts/room_entrance.gd" id="4_6mpg5"]
 [ext_resource type="PackedScene" uid="uid://5c5g4i70g1mt" path="res://assets/objects/collision_slope.tscn" id="5_f8s1x"]
 [ext_resource type="PackedScene" uid="uid://c4fxx2lj5iacm" path="res://assets/objects/collision_platform.tscn" id="6_fnk1h"]
+[ext_resource type="PackedScene" uid="uid://deb8nmuq8sgcl" path="res://assets/objects/falling_platform.tscn" id="7_fnk1h"]
+[ext_resource type="PackedScene" uid="uid://2lvlihxg6wel" path="res://assets/objects/finish_flag.tscn" id="8_54ik6"]
 
 [node name="Node2D" type="Node2D" unique_id=1069976884]
 
@@ -18,11 +20,10 @@ position = Vector2(-160, 32)
 scale = Vector2(12, 6)
 
 [node name="CameraLimiter" type="Container" parent="." unique_id=1473448496]
-visible = false
 z_index = 20
-offset_top = -328.0
-offset_right = 1264.0
-offset_bottom = 256.0
+offset_top = -64.0
+offset_right = 2208.0
+offset_bottom = 240.0
 mouse_filter = 2
 script = ExtResource("2_qa4se")
 metadata/_custom_type_script = "uid://ys4ijy3uag5c"
@@ -45,10 +46,105 @@ scale = Vector2(4, 2)
 
 [node name="CollisionBlock3" parent="." unique_id=1250525494 instance=ExtResource("1_jouor")]
 position = Vector2(192, 160)
-scale = Vector2(9, 12)
+scale = Vector2(8, 12)
 
-[node name="CollisionPlatform" parent="." unique_id=1707252071 instance=ExtResource("6_fnk1h")]
-position = Vector2(512, 128)
+[node name="CollisionBlock4" parent="." unique_id=2091243474 instance=ExtResource("1_jouor")]
+position = Vector2(2048, 64)
+scale = Vector2(64, 64)
+
+[node name="FinishFlag" parent="." unique_id=593120254 instance=ExtResource("8_54ik6")]
+position = Vector2(2128, 64)
+
+[node name="CollisionBlock5" parent="." unique_id=894516212 instance=ExtResource("1_jouor")]
+position = Vector2(320, 160)
 scale = Vector2(8, 1)
 
-[node name="FileDialog" type="FileDialog" parent="." unique_id=224698756]
+[node name="CollisionSlope2" parent="." unique_id=159375295 instance=ExtResource("5_f8s1x")]
+position = Vector2(448, 128)
+scale = Vector2(4, 2)
+
+[node name="CollisionBlock6" parent="." unique_id=1026396432 instance=ExtResource("1_jouor")]
+position = Vector2(304, -64)
+scale = Vector2(1, 11)
+
+[node name="CollisionPlatform" parent="." unique_id=1182730572 instance=ExtResource("6_fnk1h")]
+position = Vector2(320, 16)
+scale = Vector2(4, 1)
+
+[node name="CollisionBlock7" parent="." unique_id=542982093 instance=ExtResource("1_jouor")]
+position = Vector2(320, 96)
+scale = Vector2(6, 1)
+
+[node name="CollisionBlock8" parent="." unique_id=1775738642 instance=ExtResource("1_jouor")]
+position = Vector2(512, 128)
+scale = Vector2(4, 1)
+
+[node name="CollisionBlock9" parent="." unique_id=1833355609 instance=ExtResource("1_jouor")]
+position = Vector2(384, 16)
+scale = Vector2(12, 1)
+
+[node name="CollisionBlock10" parent="." unique_id=2077412743 instance=ExtResource("1_jouor")]
+position = Vector2(560, 16)
+scale = Vector2(1, 8)
+
+[node name="CollisionSlope3" parent="." unique_id=579382287 instance=ExtResource("5_f8s1x")]
+position = Vector2(640, 16)
+scale = Vector2(-4, 2)
+
+[node name="CollisionSlope4" parent="." unique_id=766797689 instance=ExtResource("5_f8s1x")]
+position = Vector2(704, 48)
+scale = Vector2(-4, 2)
+
+[node name="CollisionBlock11" parent="." unique_id=128289660 instance=ExtResource("1_jouor")]
+position = Vector2(704, 80)
+scale = Vector2(8, 1)
+
+[node name="CollisionBlock12" parent="." unique_id=1308116867 instance=ExtResource("1_jouor")]
+position = Vector2(320, -64)
+scale = Vector2(28, 1)
+
+[node name="CollisionBlock13" parent="." unique_id=1141487906 instance=ExtResource("1_jouor")]
+position = Vector2(752, -56)
+scale = Vector2(1, 5)
+
+[node name="CollisionPlatform2" parent="." unique_id=1474640039 instance=ExtResource("6_fnk1h")]
+position = Vector2(768, 16)
+scale = Vector2(4, 1)
+
+[node name="CollisionBlock14" parent="." unique_id=587581765 instance=ExtResource("1_jouor")]
+position = Vector2(832, 16)
+scale = Vector2(1, 5)
+
+[node name="FallingPlatform" parent="." unique_id=13061793 instance=ExtResource("7_fnk1h")]
+position = Vector2(1088, 64)
+scale = Vector2(8, 1)
+
+[node name="FallingPlatform2" parent="." unique_id=1295160068 instance=ExtResource("7_fnk1h")]
+position = Vector2(1408, 72)
+scale = Vector2(8, 1)
+
+[node name="FallingPlatform3" parent="." unique_id=1184580658 instance=ExtResource("7_fnk1h")]
+position = Vector2(1728, 48)
+scale = Vector2(8, 1)
+
+[node name="CollisionPlatform3" parent="." unique_id=335051194 instance=ExtResource("6_fnk1h")]
+
+[node name="CollisionBlock15" parent="." unique_id=5835282 instance=ExtResource("1_jouor")]
+position = Vector2(832, 16)
+scale = Vector2(4, 1)
+
+[node name="CollisionBlock16" parent="." unique_id=1481207093 instance=ExtResource("1_jouor")]
+position = Vector2(896, 32)
+scale = Vector2(4, 16)
+
+[node name="CollisionSlope5" parent="." unique_id=137196944 instance=ExtResource("5_f8s1x")]
+position = Vector2(928, 16)
+scale = Vector2(-2, 1)
+
+[node name="CollisionBlock17" parent="." unique_id=72352047 instance=ExtResource("1_jouor")]
+position = Vector2(1920, 64)
+scale = Vector2(8, 12)
+
+[node name="CollisionBlock18" parent="." unique_id=2111693096 instance=ExtResource("1_jouor")]
+position = Vector2(2048, -88)
+scale = Vector2(12, 5)

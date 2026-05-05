@@ -5,6 +5,11 @@ class_name FinishFlag extends Node2D
 
 var completed:bool = false
 
+func _fadeSong() -> void:
+	var musicTween:Tween = get_tree().create_tween()
+	musicTween.tween_property(MusicManager.songEmitter, "volume_linear", 0, 1)
+	return
+
 func _bodyEntered(body:Node) -> void:
 	
 	if body != CurrentPlayer:
@@ -34,7 +39,9 @@ func _bodyEntered(body:Node) -> void:
 	ScoreManager.levelTimer.stop()
 	$AnimatedSprite2D.play("finished")
 	
-	await get_tree().create_timer(8).timeout
+	_fadeSong()
+	
+	await get_tree().create_timer(2).timeout
 	get_tree().change_scene_to_file("res://assets/scenes/title.tscn")
 	return
 	

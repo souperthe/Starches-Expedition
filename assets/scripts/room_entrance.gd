@@ -47,8 +47,8 @@ func _ready() -> void:
 	if desiredEntrance != currentEntrance:
 		return
 		
-	CurrentPlayer.position = position 
-	CurrentCamera.position = position
+	CurrentPlayer.position = global_position 
+	CurrentCamera.position = global_position
 	
 	await get_tree().physics_frame
 	
