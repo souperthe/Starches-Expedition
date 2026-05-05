@@ -7,7 +7,8 @@ var completed:bool = false
 
 func _fadeSong() -> void:
 	var musicTween:Tween = get_tree().create_tween()
-	musicTween.tween_property(MusicManager.songEmitter, "volume_linear", 0, 1)
+	MusicManager.songEmitter.seek(MusicManager.songEndPosition)
+	musicTween.tween_property(MusicManager.songEmitter, "volume_linear", 0, 6)
 	return
 
 func _bodyEntered(body:Node) -> void:
@@ -41,7 +42,7 @@ func _bodyEntered(body:Node) -> void:
 	
 	_fadeSong()
 	
-	await get_tree().create_timer(2).timeout
+	await get_tree().create_timer(7).timeout
 	get_tree().change_scene_to_file("res://assets/scenes/title.tscn")
 	return
 	

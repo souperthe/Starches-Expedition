@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="SelectableLevel" format=3 uid="uid://bv8txnmddcgc4"]
+
+[ext_resource type="Texture2D" uid="uid://ita5bs6nraxv" path="res://assets/images/title/title_levelportraits.swf/frames/3.svg" id="1_oc60l"]
+[ext_resource type="PackedScene" uid="uid://dep758rl8i2ty" path="res://assets/scenes/level_2/level2_1.tscn" id="2_abda8"]
+[ext_resource type="Script" uid="uid://cagq0npjkk5f5" path="res://assets/scripts/selectable_level.gd" id="3_2yxab"]
+
+[resource]
+script = ExtResource("3_2yxab")
+levelName = "The Hotlands"
+levelIcon = ExtResource("1_oc60l")
+levelStartScene = ExtResource("2_abda8")
+metadata/_custom_type_script = "uid://cagq0npjkk5f5"

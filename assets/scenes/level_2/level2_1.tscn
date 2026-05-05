@@ -64,6 +64,7 @@ offset_left = 16.0
 offset_top = -344.0
 offset_right = 2592.0
 offset_bottom = 224.0
+mouse_filter = 2
 script = ExtResource("4_sapp8")
 metadata/_custom_type_script = "uid://ys4ijy3uag5c"
 
@@ -250,6 +251,7 @@ position = Vector2(416, -184)
 [node name="MusicPlayer" type="Node" parent="." unique_id=244191673]
 script = ExtResource("7_gcp6a")
 targetSong = ExtResource("8_gcp6a")
+targetEndPosition = 135.0
 metadata/_custom_type_script = "uid://de44qasu6i3k6"
 
 [node name="CollisionBlock18" parent="." unique_id=1140213274 instance=ExtResource("1_xkxx6")]

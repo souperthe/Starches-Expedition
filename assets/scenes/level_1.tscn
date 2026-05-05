@@ -21,6 +21,7 @@ z_index = 20
 offset_top = -320.0
 offset_right = 11536.0
 offset_bottom = 256.0
+mouse_filter = 2
 script = ExtResource("7_vh25t")
 metadata/_custom_type_script = "uid://ys4ijy3uag5c"
 
@@ -755,4 +756,5 @@ position = Vector2(11487, -136)
 [node name="MusicPlayer" type="Node" parent="." unique_id=748926292]
 script = ExtResource("9_kwwwe")
 targetSong = ExtResource("5_jil0d")
+targetEndPosition = 165.64
 metadata/_custom_type_script = "uid://de44qasu6i3k6"

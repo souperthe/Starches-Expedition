@@ -5,6 +5,7 @@ class_name ClassMusicManager extends Node
 var songCurrent:String = ""
 var songVolume:float = 0.5
 var songStream:AudioStream
+var songEndPosition:float
 
 func _ready() -> void:
 	songEmitter.volume_linear = songVolume
