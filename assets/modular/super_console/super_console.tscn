@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://c2siki54vhfed"]
+
+[ext_resource type="Script" uid="uid://cwso7dh3si0cj" path="res://assets/modular/super_console/super_console.gd" id="1_2244f"]
+
+[node name="SuperConsole" type="CanvasLayer" unique_id=2110302121]
+script = ExtResource("1_2244f")

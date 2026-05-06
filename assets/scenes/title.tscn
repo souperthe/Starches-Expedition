@@ -9,7 +9,6 @@
 [ext_resource type="Script" uid="uid://de44qasu6i3k6" path="res://assets/scripts/music_player.gd" id="4_qxslq"]
 [ext_resource type="Resource" uid="uid://cl08gp1pijeky" path="res://assets/resources/selectable_levels/level_2.tres" id="4_s21ad"]
 [ext_resource type="AudioStream" uid="uid://bnu58lduwqppg" path="res://assets/sound/music/title.wav" id="5_4c3p0"]
-[ext_resource type="Resource" uid="uid://bv8txnmddcgc4" path="res://assets/resources/selectable_levels/level_3.tres" id="5_4l0ss"]
 [ext_resource type="Texture2D" uid="uid://wkg842gvnjfv" path="res://assets/resources/animated_textures/nudge.tres" id="5_fv6c7"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_fv6c7"]
@@ -20,7 +19,7 @@ font_size = 19
 
 [node name="title" type="Node2D" unique_id=566974950 node_paths=PackedStringArray("levelPortait", "levelStats", "levelLabel", "nudgeRight", "nudgeLeft", "fades")]
 script = ExtResource("1_fljja")
-levels = Array[ExtResource("2_f2nfk")]([ExtResource("3_s21ad"), ExtResource("4_s21ad"), ExtResource("5_4l0ss")])
+levels = Array[ExtResource("2_f2nfk")]([ExtResource("3_s21ad"), ExtResource("4_s21ad")])
 levelPortait = NodePath("CanvasLayer/Control/LevelPortrait")
 levelStats = NodePath("CanvasLayer/Control/Fade/LevelLabel2")
 levelLabel = NodePath("CanvasLayer/Control/Fade/LevelLabel")
