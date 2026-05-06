@@ -12,7 +12,7 @@ func _ready() -> void:
 
 func _process(_delta: float) -> void:
 	
-	var firstPlayer:Player = PlayerManager.players[0]
+	var firstPlayer:Player = PlayerManager.playerMain
 	var debugText:String = str(
 		"Velocity -> ", firstPlayer.velocity.floor(), "\n",
 		"Position -> ", firstPlayer.position.floor(), "\n",

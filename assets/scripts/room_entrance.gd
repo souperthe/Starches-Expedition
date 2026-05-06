@@ -49,6 +49,7 @@ func _ready() -> void:
 		
 	for player in PlayerManager.players:
 		player.position = global_position
+		player.position.x += (player.sprite.scale.x * 8) * float(player.playerIndex)
 		continue
 		
 	CurrentCamera.position = global_position

@@ -5,6 +5,8 @@ class_name PlayerCamera extends Camera2D
 var shakeAmount:float = 0
 var shakeDecay:float = 2
 var decayTo:float = 0
+var defaultZoom:float = 2.0
+
 
 func cameraShake(amount:float = 2, decay:float = 3) -> void:
 	shakeAmount = amount
@@ -24,13 +26,8 @@ func _ready() -> void:
 	return
 
 func _process(_delta: float) -> void:
-	
-	var firstPlayer:Player = PlayerManager.players[0]
-	
-	if !firstPlayer:
-		return
 		
-	position = firstPlayer.position + cameraOffset
+	position = PlayerManager.playerMain.position + cameraOffset
 	_shakeProcess(_delta)
 	
 	return
