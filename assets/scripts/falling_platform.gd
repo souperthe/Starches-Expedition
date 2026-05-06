@@ -39,13 +39,13 @@ func _reset() -> void:
 
 func _bodyEntered(body:Node2D) -> void:
 	
-	if body != CurrentPlayer:
+	if not(body is Player):
 		return
 		
-	if CurrentPlayer.fallzoneManager.fallen:
+	if body.fallzoneManager.fallen:
 		return
 		
-	if CurrentPlayer.velocity.y < -1:
+	if body.velocity.y < -1:
 		return
 	
 	if _falling:

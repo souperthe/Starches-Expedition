@@ -119,7 +119,9 @@ func _displayLevel(targetLevel:SelectableLevel) -> void:
 	return
 
 func _ready() -> void:
-	CurrentPlayer.reset()
+	
+	for player in PlayerManager.players:
+		player.reset()
 	
 	_displayLevel(levels[0])
 	return

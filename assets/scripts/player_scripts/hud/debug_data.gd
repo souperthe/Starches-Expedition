@@ -12,12 +12,13 @@ func _ready() -> void:
 
 func _process(_delta: float) -> void:
 	
+	var firstPlayer:Player = PlayerManager.players[0]
 	var debugText:String = str(
-		"Velocity -> ", CurrentPlayer.velocity.floor(), "\n",
-		"Position -> ", CurrentPlayer.position.floor(), "\n",
-		"State -> ", CurrentPlayer.stateManager.currentState, "\n",
-		"Last speed  -> ", floorf(CurrentPlayer.lastSpeed), "\n",
-		"Coyote Time -> ", floorf(CurrentPlayer.coyoteTime)
+		"Velocity -> ", firstPlayer.velocity.floor(), "\n",
+		"Position -> ", firstPlayer.position.floor(), "\n",
+		"State -> ", firstPlayer.stateManager.currentState, "\n",
+		"Last speed  -> ", floorf(firstPlayer.lastSpeed), "\n",
+		"Coyote Time -> ", floorf(firstPlayer.coyoteTime)
 	)
 	
 	debugLabel.text = debugText

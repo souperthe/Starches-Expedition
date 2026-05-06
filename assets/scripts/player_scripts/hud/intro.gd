@@ -3,12 +3,14 @@ class_name HudIntro extends Control
 @export var animator:AnimationPlayer
 
 func _introFinished() -> void:
-	CurrentPlayer.stateManager.switchState("idle")
 	ScoreManager.levelTimer.start()
 	ScoreManager.levelBegan = Time.get_ticks_msec()
 	
-	print(ScoreManager.levelBegan)
-	CurrentPlayer.runPhysics = true
+	for player in PlayerManager.players:
+		player.stateManager.switchState("idle")
+		player.runPhysics = true
+		continue
+		
 	return
 	
 func _introPlay() -> void:
@@ -18,9 +20,13 @@ func _introPlay() -> void:
 	var currentLevel:Level = get_tree().current_scene
 	
 	ScoreManager.levelTimer.wait_time = currentLevel.levelTime
-	CurrentPlayer.stateManager.switchState("actor")
-	CurrentPlayer.velocity = Vector2.ZERO
-	CurrentPlayer.animationManager.animationPlay("level_start", 0.3)
+	
+	for player in PlayerManager.players:
+		player.stateManager.switchState("actor")
+		player.velocity = Vector2.ZERO
+		player.animationManager.animationPlay("level_start", 0.3)
+		continue
+		
 	return
 	
 func _entranceSent(entrance:String) -> void:

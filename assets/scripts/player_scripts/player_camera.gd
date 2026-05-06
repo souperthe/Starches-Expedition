@@ -25,10 +25,12 @@ func _ready() -> void:
 
 func _process(_delta: float) -> void:
 	
-	if !CurrentPlayer:
+	var firstPlayer:Player = PlayerManager.players[0]
+	
+	if !firstPlayer:
 		return
 		
-	position = CurrentPlayer.position + cameraOffset
+	position = firstPlayer.position + cameraOffset
 	_shakeProcess(_delta)
 	
 	return

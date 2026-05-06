@@ -13,7 +13,7 @@ func _fadeSong() -> void:
 
 func _bodyEntered(body:Node) -> void:
 	
-	if body != CurrentPlayer:
+	if not(body is Player):
 		return
 		
 	if completed:
@@ -21,7 +21,8 @@ func _bodyEntered(body:Node) -> void:
 		
 	completed = true
 	
-	CurrentPlayer.stateManager.switchState("actor")
+	
+	body.stateManager.switchState("actor")
 	ScoreManager.levelEnded = Time.get_ticks_msec()
 	ScoreManager.levelTimeRemaining = ScoreManager.levelTimer.time_left
 	

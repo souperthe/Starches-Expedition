@@ -7,7 +7,7 @@ class_name Hallway extends Node2D
 
 func _bodyEntered(body:Node) -> void:
 	
-	if body != CurrentPlayer:
+	if not(body is Player):
 		return
 		
 	EntranceManager.transitionRoom(targetScene, targetEntrance)

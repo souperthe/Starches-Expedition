@@ -39,7 +39,7 @@ func _createScoreVisual(targetValue:int) -> void:
 
 func _bodyEntered(node:Node) -> void:
 	
-	if node != CurrentPlayer:
+	if not(node is Player):
 		return
 		
 	ScoreManager.currentScore += value

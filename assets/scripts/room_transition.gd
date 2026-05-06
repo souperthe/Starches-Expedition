@@ -5,6 +5,14 @@ var fadeTime:float = 0.2
 var fakeWait:float = 0.1
 var targetScene:String
 
+func setPlayersPhysics(enabled:bool) -> void:
+	
+	for player in PlayerManager.players:
+		player.runPhysics = enabled
+		continue
+		
+	return
+
 func _rectOut() -> void:
 	
 	await get_tree().create_timer(fakeWait).timeout
@@ -16,7 +24,7 @@ func _rectOut() -> void:
 	var outTween:Tween = get_tree().create_tween()
 	outTween.tween_property(fadeRect, "modulate:a", 0, fadeTime)
 	
-	CurrentPlayer.runPhysics = true
+	setPlayersPhysics(true)
 	return
 
 func _rectIn() -> void:
@@ -36,7 +44,7 @@ func _ready() -> void:
 	fadeRect.modulate.a = 0
 	add_child(fadeRect)
 	
-	CurrentPlayer.runPhysics = false
+	setPlayersPhysics(false)
 	
 	_rectIn()
 	return
