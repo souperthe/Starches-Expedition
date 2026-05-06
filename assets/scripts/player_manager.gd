@@ -1,8 +1,9 @@
 class_name ClassPlayerManager extends Node2D
 
 var players:Array[Player] = []
-var playerCount:int = 2
+var playerCount:int = 1
 var playerMain:Player
+var playerHallway:Player
 
 var playerScene:PackedScene = load("res://assets/objects/player.tscn")
 
@@ -29,11 +30,28 @@ func _createPlayer(playerIndex:int) -> void:
 	
 	print("PlayerManager -> created player with index: ", playerIndex)
 	return
+	
+func _playerAddExceptions(targetPlayer:Player) -> void:
+	
+	for player in players:
+		
+		if player == targetPlayer:
+			continue
+			
+		targetPlayer.add_collision_exception_with(player)
+		
+		continue
+		
+	return
 
 func _createPlayers() -> void:
 	
 	for playerIndex in range(playerCount):
 		_createPlayer(playerIndex)
+		continue
+		
+	for player in players:
+		_playerAddExceptions(player)
 		continue
 	
 	return

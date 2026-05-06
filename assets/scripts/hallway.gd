@@ -10,6 +10,8 @@ func _bodyEntered(body:Node) -> void:
 	if not(body is Player):
 		return
 		
+	PlayerManager.playerHallway = body
+		
 	EntranceManager.transitionRoom(targetScene, targetEntrance)
 		
 	return

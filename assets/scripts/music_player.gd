@@ -12,8 +12,6 @@ func _ready() -> void:
 	if MusicManager.songCurrent == targetSong.resource_path:
 		return
 		
-	print("play")
-		
 	MusicManager.songPlayPacked(targetSong, targetSeek)
 	MusicManager.songEndPosition = targetEndPosition
 	queue_free()

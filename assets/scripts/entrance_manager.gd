@@ -37,8 +37,5 @@ func transitionRoom(targetScene:String, targetEntrance:String, fadeTime:float=0.
 	roomTransition.fadeTime = fadeTime
 	roomTransition.targetScene = targetScene
 	
-	print(targetScene)
-	print(targetEntrance)
-	
 	EntranceManager.add_child(roomTransition)
 	return

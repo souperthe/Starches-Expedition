@@ -21,13 +21,27 @@ func _shakeProcess(delta:float) -> void:
 	offset.y = randf_range(-shakeAmount,shakeAmount)
 	rotation_degrees = randf_range(-shakeAmount,shakeAmount)/2
 	return
+	
+func _getPlayerCenter() -> Vector2:
+	var playerPositions:Array[Vector2] = PlayerManager.getPlayerPositions()
+	
+	if playerPositions.is_empty():
+		return Vector2.ZERO
+		
+	var positionSum:Vector2 = Vector2.ZERO
+	
+	for pos in playerPositions:
+		positionSum += pos
+		continue
+	
+	return positionSum / playerPositions.size()
 
 func _ready() -> void:
 	return
 
 func _process(_delta: float) -> void:
 		
-	position = PlayerManager.playerMain.position + cameraOffset
+	position = _getPlayerCenter() + cameraOffset
 	_shakeProcess(_delta)
 	
 	return
