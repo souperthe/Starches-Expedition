@@ -1,10 +1,10 @@
 extends PlayerState
 
-func stateEnter(enterMessage:String) -> void:
+func stateEnter(_enterMessage:String) -> void:
 	return
 	
-func stateExit(exitMessage:String) -> void:
+func stateExit(_exitMessage:String) -> void:
 	return
 	
-func stateProcess(delta:float) -> void:
+func stateProcess(_delta:float) -> void:
 	return
