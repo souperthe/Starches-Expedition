@@ -7,6 +7,9 @@ var playerHallway:Player
 
 var playerScene:PackedScene = load("res://assets/objects/player.tscn")
 
+const PLAYERS_MIN : int = 4
+const PLAYERS_MAX : int = 1
+
 func getPlayerPositions() -> Array[Vector2]:
 	
 	var playerPositions:Array[Vector2] = []
@@ -45,6 +48,8 @@ func _playerAddExceptions(targetPlayer:Player) -> void:
 	return
 
 func _createPlayers() -> void:
+	
+	playerCount = clampi(playerCount, PLAYERS_MIN, PLAYERS_MAX)
 	
 	for playerIndex in range(playerCount):
 		_createPlayer(playerIndex)
