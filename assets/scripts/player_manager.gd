@@ -7,8 +7,8 @@ var playerHallway:Player
 
 var playerScene:PackedScene = load("res://assets/objects/player.tscn")
 
-const PLAYERS_MIN : int = 4
-const PLAYERS_MAX : int = 1
+const PLAYERS_MIN : int = 1
+const PLAYERS_MAX : int = 4
 
 func getPlayerPositions() -> Array[Vector2]:
 	
