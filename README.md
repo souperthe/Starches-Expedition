@@ -1,6 +1,6 @@
 # STARCHES EXPEDITION
 
-a very simple Rayman inspired 2d platformer I had created in [Godot 4.6](https://godotengine.org/releases/4.6/) as a Personal Interest project for school
+a very simple (and unfinished) Rayman inspired 2d platformer I had created in [Godot 4.6](https://godotengine.org/releases/4.6/) as a Personal Interest project for school
 
 ## FEATURES
 
